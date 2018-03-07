@@ -2,12 +2,11 @@
         PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-2.0.dtd"><hibernate-mapping>
 
-    <class name="agencespatiale" table="exoplanetes">
+    <class name="exoplanetes" table="exoplanetes">
         <id name="planete" type="string" column="planete">
             <generator class="native"/>
         </id>
         <property name="etoile" type="string" not-null="true" />
-        <property name="temperature" type="string" not-null="true" />
-        <property name="zone" type="string" not-null="true" />
+
     </class>
 </hibernate-mapping>

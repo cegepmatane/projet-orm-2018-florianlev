@@ -12,7 +12,7 @@ import orm.modele.Planete;
 
 //package orm.dao;
 
-public class DaoOrm<T> {
+public class DaoOrm {
 
     List<Planete> listePlanete;
 
@@ -26,6 +26,7 @@ public class DaoOrm<T> {
     {
         Configuration configuration = new Configuration();
         configuration.addClass(Planete.class);
+
         SessionFactory sessionControleur = configuration.buildSessionFactory();
         Session session = sessionControleur.openSession();
 
