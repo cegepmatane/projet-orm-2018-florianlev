@@ -1,4 +1,4 @@
-package orm.orm.controleur;
+package orm.controleur;
 
 public class ControleurOrm {
 }
