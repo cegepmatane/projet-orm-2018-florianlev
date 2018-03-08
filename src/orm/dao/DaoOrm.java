@@ -42,7 +42,7 @@ public class DaoOrm {
             if (operation != null) operation.rollback();
         }
 
-        Iterator iterateurPlanete = session.createQuery("from exoplanetes").iterate();
+        Iterator iterateurPlanete = session.createQuery("from Planete").iterate();
 
         while (iterateurPlanete.hasNext())
         {
