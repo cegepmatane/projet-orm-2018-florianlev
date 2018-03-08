@@ -23,7 +23,7 @@ public class Planete {
 	
 	public Planete()
 	{
-		
+
 	}
 	
 	public String getNom() {
