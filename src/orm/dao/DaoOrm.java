@@ -14,7 +14,7 @@ import orm.modele.Planete;
 
 public class DaoOrm {
 
-    List<Planete> listePlanete;
+	protected List<Planete> listePlanete;
 
 
     public DaoOrm() {
@@ -46,16 +46,13 @@ public class DaoOrm {
 
         while (iterateurPlanete.hasNext())
         {
-            Planete planete = (Planete)iterateurPlanete.next();
-            System.out.println(planete.getNom());
+            listePlanete.add((Planete)iterateurPlanete.next());
         }
-
+        
         session.close();
         sessionControleur.close();
 
         return listePlanete;
-
-
     }
 
 

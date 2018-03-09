@@ -7,6 +7,9 @@
             <generator class="native"/>
         </id>
         <property name="etoile" type="string" not-null="true" />
-
+		<property name="temperature" type="string" not-null="true" />
+		<property name="flux" type="float" not-null="true" />
+		<property name="distance" type="float" not-null="true" />
+		<property name="periode" type="float" not-null="true" />
     </class>
 </hibernate-mapping>
