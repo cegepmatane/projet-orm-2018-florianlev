@@ -63,7 +63,7 @@ public class DaoOrm {
 
         SessionFactory sessionControleur = configuration.buildSessionFactory();
         Session session = sessionControleur.openSession();
-        planete = new Planete();
+
 
         session.beginTransaction();
 
@@ -93,8 +93,22 @@ public class DaoOrm {
 
         query.executeUpdate();
         session.getTransaction();
+    }
 
 
+    public static void supprimerPlanete(String planete) {
+
+
+        Configuration configuration = new Configuration();
+        configuration.addClass(Planete.class);
+
+        SessionFactory sessionControleur = configuration.buildSessionFactory();
+        Session session = sessionControleur.openSession();
+
+        session.beginTransaction();
+        SQLQuery query = session.createSQLQuery("" + "DELETE FROM exoplanetes WHERE planete = '" + planete +"'");
+        query.executeUpdate();
+        session.getTransaction();
     }
 
 
