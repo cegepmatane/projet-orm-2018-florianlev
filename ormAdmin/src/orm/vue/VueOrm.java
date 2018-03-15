@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -23,9 +25,7 @@ import orm.modele.Planete;
 public class VueOrm extends Application{
 	protected List<Planete> listePlanete;
 	protected ControleurOrm controleur;
-	protected VBox racine;
-	protected Alert alerte;
-	protected Alert alerteContinent;
+	protected Alert suprimer;
 	protected Stage scenePrincipale; 
 	
 	public VueOrm()
@@ -39,59 +39,88 @@ public class VueOrm extends Application{
 	public void start(Stage scenePrincipale) throws Exception 
 	{
 		this.scenePrincipale = scenePrincipale;
-		racine = new VBox();
-		racine.setAlignment(Pos.TOP_LEFT);
+		
 		this.afficherScenePrincipale();
 		
 	}
-	public void afficherScenePrincipale()
+	protected void afficherScenePrincipale()
 	{
+		VBox racine = new VBox();
+		racine.setAlignment(Pos.TOP_LEFT);
 		Button bouttonAjouter = new Button();
 		bouttonAjouter.setText("Ajouter");
 		bouttonAjouter.setTranslateX(105);
 		bouttonAjouter.setTranslateY(20);
-		
+		this.ajouterEvenementAjouter(bouttonAjouter);
 
 		racine.getChildren().add(bouttonAjouter);
 		
-		afficherPanetes();	
+		afficherPanetes(racine);	
 		
 		
 		ScrollPane scroll = new ScrollPane();
 		scroll.setContent(racine);
 		Scene scene = new Scene(scroll, 500, 500);
-		
+		changerScene(scene);
+	}
+	protected void afficherAlerteSuprimer(String Planete)
+	{
+	}
+	protected void afficherSceneAjouter()
+	{
+		StackPane racine = new StackPane();
+		Scene scene = new Scene(racine, 500, 500);
+		changerScene(scene);
+	}
+	protected void afficherSceneModifier(String Planete)
+	{
+		StackPane racine = new StackPane();
+		Scene scene = new Scene(racine, 500, 500);
+		changerScene(scene);
+	}
+	protected void changerScene(Scene scene)
+	{
 		scenePrincipale.setScene(scene);
 		scenePrincipale.setTitle("Planet");
 		scenePrincipale.show();
 	}
-	public void afficherPanetes()
+	protected void ajouterEvenementSuprimmer(Button boutton)
 	{
-		int translateY = 80;
+	}
+	protected void ajouterEvenementAjouter(Button boutton)
+	{
+		boutton.setOnAction(new EventHandler<ActionEvent>() {
+		    public void handle(ActionEvent e) {
+		    	afficherSceneAjouter();
+		    }});
+	}
+	protected void ajouterEvenementModifier(Button boutton)
+	{
 		
+	}
+	protected void afficherPanetes(VBox racine)
+	{
+		int decalage = 80;
 		
 		for(int position = listePlanete.size()-1;position >= 0; position--)
 		{
 			Label labelPlanet =  new Label(listePlanete.get(position).getNom());
-			Button bouttonSuprimer = new Button();
-			Button bouttonModifier = new Button();
+			Button bouttonSuprimer = new Button("Suprimer");
+			Button bouttonModifier = new Button("Modifier");
 			
 			labelPlanet.setTranslateX(0);
-			labelPlanet.setTranslateY(translateY);
+			labelPlanet.setTranslateY(decalage);
 			
 			bouttonSuprimer.setId(listePlanete.get(position).getNom());
-			bouttonSuprimer.setText("Suprimer");
 			bouttonSuprimer.setTranslateX(100);
-			bouttonSuprimer.setTranslateY(translateY-25);
+			bouttonSuprimer.setTranslateY(decalage-25);
+			this.ajouterEvenementSuprimmer(bouttonSuprimer);
 			
 			bouttonModifier.setId(listePlanete.get(position).getNom());
-			bouttonModifier.setText("Modifier");
 			bouttonModifier.setTranslateX(200);
-			bouttonModifier.setTranslateY(translateY-50);
-			
+			bouttonModifier.setTranslateY(decalage-50);
 
 			racine.getChildren().addAll(labelPlanet, bouttonSuprimer, bouttonModifier);
-			
 		}
 	}
 }
