@@ -1,4 +1,5 @@
 package orm.dao;
+import java.sql.SQLException;
 import java.util.Iterator;
 
 import org.hibernate.*;
@@ -54,6 +55,25 @@ public class DaoOrm {
 
         return listePlanete;
     }
+
+    public static void ajouterPlanete()
+    {
+        Configuration configuration = new Configuration();
+        configuration.addClass(Planete.class);
+
+        SessionFactory sessionControleur = configuration.buildSessionFactory();
+        Session session = sessionControleur.openSession();
+
+        session.beginTransaction();
+        
+        SQLQuery query = session.createSQLQuery("" + "INSERT INTO exoplanetes (planete) VALUES (?)");
+        query.setParameter(0, "test");
+        query.executeUpdate();
+        session.getTransaction();
+
+
+    }
+
 
 
 

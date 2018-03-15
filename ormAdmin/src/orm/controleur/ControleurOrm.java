@@ -18,7 +18,8 @@ public class ControleurOrm {
 		listePlanete = new ArrayList<>();
 		DaoOrm daoPlanete = new DaoOrm();
 		daoPlanete.getRecherchePlanete();
-		
+		daoPlanete.ajouterPlanete();
+
 		listePlanete = daoPlanete.getRecherchePlanete();
 	}
 	public List<Planete> getListePlanete() {
