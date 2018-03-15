@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/projet-orm-2018-florianlev.iml" filepath="$PROJECT_DIR$/projet-orm-2018-florianlev.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/projet-orm-2018-florianlev.iml" filepath="$PROJECT_DIR$/.idea/projet-orm-2018-florianlev.iml" />
     </modules>
   </component>
 </project>
