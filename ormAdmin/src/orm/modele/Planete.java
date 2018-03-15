@@ -18,14 +18,45 @@ public class Planete {
 	protected float hza;
 	protected String fClasse;
 	protected String hClasse;
+	protected String phi;
+	protected String distance2;
 	protected String status;
 	protected String decouverte;
-	
+	protected String pClasse;
+
+
 	public Planete()
 	{
 
 	}
-	
+
+	public String getPhi() {
+		return phi;
+	}
+
+	public void setPhi(String phi) {
+		this.phi = phi;
+	}
+
+	public String getDistance2() {
+		return distance2;
+	}
+
+	public void setDistance2(String distance2) {
+		this.distance2 = distance2;
+	}
+
+	public String getpClasse() {
+		return pClasse;
+	}
+
+	public void setpClasse(String pClasse) {
+		this.pClasse = pClasse;
+	}
+
+
+
+
 	public String getNom() {
 		return nom;
 	}

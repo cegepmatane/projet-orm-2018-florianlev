@@ -15,7 +15,7 @@ import orm.modele.Planete;
 
 public class DaoOrm {
 
-	protected List<Planete> listePlanete;
+    protected List<Planete> listePlanete;
 
 
     public DaoOrm() {
@@ -49,25 +49,48 @@ public class DaoOrm {
         {
             listePlanete.add((Planete)iterateurPlanete.next());
         }
-        
+
         session.close();
         sessionControleur.close();
 
         return listePlanete;
     }
 
-    public static void ajouterPlanete()
+    public static void ajouterPlanete(Planete planete)
     {
         Configuration configuration = new Configuration();
         configuration.addClass(Planete.class);
 
         SessionFactory sessionControleur = configuration.buildSessionFactory();
         Session session = sessionControleur.openSession();
+        planete = new Planete();
 
         session.beginTransaction();
-        
-        SQLQuery query = session.createSQLQuery("" + "INSERT INTO exoplanetes (planete) VALUES (?)");
-        query.setParameter(0, "test");
+
+        SQLQuery query = session.createSQLQuery("" + "INSERT INTO exoplanetes (planete,etoile,typeEtoile,masse,rayon,flux,temperature,periode,distance,zone,ist,sph,hzd,hzc,hza,pClasse,hClasse,phi,distance2,status,decouverte) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+        query.setParameter(0, planete.getNom());
+        query.setParameter(1, planete.getEtoile());
+        query.setParameter(2, planete.getTypeEtoile());
+        query.setParameter(3, planete.getMasse());
+        query.setParameter(4, planete.getRayon());
+        query.setParameter(5, planete.getFlux());
+        query.setParameter(6, planete.getTemperature());
+        query.setParameter(7, planete.getPeriode());
+        query.setParameter(8, planete.getDistance());
+        query.setParameter(9, planete.getZone());
+        query.setParameter(10, planete.getIst());
+        query.setParameter(11, planete.getSph());
+        query.setParameter(12, planete.getHzd());
+        query.setParameter(13, planete.getHzc());
+        query.setParameter(14, planete.getHza());
+        query.setParameter(15, planete.getpClasse());
+        query.setParameter(16, planete.gethClasse());
+        query.setParameter(17, planete.getPhi());
+        query.setParameter(18, planete.getDistance2());
+        query.setParameter(19, planete.getStatus());
+        query.setParameter(20, planete.getDecouverte());
+
+
         query.executeUpdate();
         session.getTransaction();
 
