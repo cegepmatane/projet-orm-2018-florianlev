@@ -86,7 +86,6 @@ public class VueOrm extends Application{
 	}
 	protected void ajouterEvenementSuprimmer(Button boutton)
 	{
-		
 	}
 	protected void ajouterEvenementAjouter(Button boutton)
 	{
