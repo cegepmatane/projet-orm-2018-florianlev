@@ -19,11 +19,14 @@ public class ControleurOrm {
 		DaoOrm daoPlanete = new DaoOrm();
 		daoPlanete.getRecherchePlanete();
 
-		//FONCTION AJOUT PLANETE
+		//FONCTION AJOUT PLANETE PREND EN PARAM UN OBJET PLANETE
 		//daoPlanete.ajouterPlanete();
 
-		//FONCTION SUPPRIMER PLANETE
+		//FONCTION SUPPRIMER PLANETE PREND EN PARAM UN STRING
 		//daoPlanete.supprimerPlanete("test");
+
+		//FONCTION MODIFIER PLANETE PREND EN PARAM UN OBJET PLANETE
+		//daoPlanete.modifierPlanete();
 
 		listePlanete = daoPlanete.getRecherchePlanete();
 	}
