@@ -14,7 +14,7 @@
         <property name="temperature" type="string" not-null="true" />
         <property name="periode" type="float" not-null="true" />
         <property name="distance" type="float" not-null="true" />
-        <property name="zone" type="String" not-null="true" />
+        <property name="zone" type="string" not-null="true" />
         <property name="ist" type="float" not-null="true" />
         <property name="sph" type="float" not-null="true" />
         <property name="hzd" type="float" not-null="true" />
