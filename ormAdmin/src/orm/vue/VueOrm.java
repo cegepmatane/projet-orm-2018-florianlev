@@ -89,10 +89,10 @@ public class VueOrm extends Application{
 		Label nomPage = new Label("Ajouter une planete");
 		racine.setAlignment(nomPage, Pos.TOP_CENTER);
 		
-		ajouterChamps(racine);
+		ajouterChamps(racine, false, "none");
 		
 		Button valider = new Button("valider");
-		this.ajouterEvenementValider(valider, racine);
+		this.ajouterEvenementAjouter(valider, racine);
 		racine.setAlignment(valider, Pos.BOTTOM_CENTER);
 		
 		Button retour = new Button("retour");
@@ -104,12 +104,41 @@ public class VueOrm extends Application{
 		Scene scene = new Scene(racine, 500, 705);
 		changerScene(scene);
 	}
-	protected void ajouterChamps(StackPane racine)
+	protected void afficherSceneModifier(String planete)
+	{
+		StackPane racine = new StackPane();
+		racine.setAlignment(Pos.TOP_LEFT);
+		
+		Label nomPage = new Label("Modifer une planete");
+		racine.setAlignment(nomPage, Pos.TOP_CENTER);
+		
+		ajouterChamps(racine, true, planete);
+		
+		Button valider = new Button("valider");
+		this.ajouterEvenementModifier(valider, racine);
+		racine.setAlignment(valider, Pos.BOTTOM_CENTER);
+		
+		Button retour = new Button("retour");
+		this.ajouterEvenementRetour(retour);
+		racine.setAlignment(retour, Pos.BOTTOM_LEFT);
+		
+		racine.getChildren().addAll(nomPage, valider, retour);
+		
+		Scene scene = new Scene(racine, 500, 705);
+		changerScene(scene);
+	}
+	protected void ajouterChamps(StackPane racine, boolean pourModifier, String planete)
 	{
 		int decalageYChamp = 20, decalageYLabel = 25, decalageY = 30, decalageXChamp = 100, decalageXLabel = 0; 
 		
+		
 		Label labelNom = createurLabel("(S)nom", decalageXLabel, decalageYLabel);
 		TextField champNom = createurTextField(decalageXChamp, decalageYChamp);
+		if(pourModifier){
+			champNom.setText(planete);
+			labelNom.setVisible(false);
+			champNom.setVisible(false);
+		}
 		
 		decalageYChamp += decalageY;
 		decalageYLabel += decalageY;
@@ -238,9 +267,17 @@ public class VueOrm extends Application{
 		TextField champPClasse = createurTextField(decalageXChamp, decalageYChamp);
 		
 		
-		racine.getChildren().addAll(labelNom, champNom, labelEtoile, champEtoile, labelTypeEtoile, champTypeEtoile, labelMasse, champMasse, labelRayon, champRayon, labelFlux, champFlux, labelTemperature, champTemperature,
-				labelPeriode, champPeriode, labelDistance, champDistance, labelZone, champZone, labelIst, champIst, labelSph, champSph, labelHzd ,champHzd, labelHzc ,champHzc, labelHza ,champHza, labelFClasse ,champFClasse, 
-				labelHClasse ,champHClasse, labelPhi ,champPhi, labelDistance2, champDistance2, labelStatus, champStatus, labelDecouverte, champDecouverte, labelPClasse ,champPClasse);
+		//if(!pourModifier){
+			racine.getChildren().addAll(labelNom, champNom, labelEtoile, champEtoile, labelTypeEtoile, champTypeEtoile, labelMasse, champMasse, labelRayon, champRayon, labelFlux, champFlux, labelTemperature, champTemperature,
+					labelPeriode, champPeriode, labelDistance, champDistance, labelZone, champZone, labelIst, champIst, labelSph, champSph, labelHzd ,champHzd, labelHzc ,champHzc, labelHza ,champHza, labelFClasse ,champFClasse, 
+					labelHClasse ,champHClasse, labelPhi ,champPhi, labelDistance2, champDistance2, labelStatus, champStatus, labelDecouverte, champDecouverte, labelPClasse ,champPClasse);
+		/*}
+		else
+		{
+			racine.getChildren().addAll(labelEtoile, champEtoile, labelTypeEtoile, champTypeEtoile, labelMasse, champMasse, labelRayon, champRayon, labelFlux, champFlux, labelTemperature, champTemperature,
+					labelPeriode, champPeriode, labelDistance, champDistance, labelZone, champZone, labelIst, champIst, labelSph, champSph, labelHzd ,champHzd, labelHzc ,champHzc, labelHza ,champHza, labelFClasse ,champFClasse, 
+					labelHClasse ,champHClasse, labelPhi ,champPhi, labelDistance2, champDistance2, labelStatus, champStatus, labelDecouverte, champDecouverte, labelPClasse ,champPClasse);
+		}*/
 	}
 	protected TextField createurTextField( int x, int y)
 	{
@@ -256,19 +293,20 @@ public class VueOrm extends Application{
 		label.setTranslateY(y);
 		return label;
 	}
-	protected void afficherSceneModifier(String planete)
-	{
-		StackPane racine = new StackPane();
-		Label label = new Label(planete);
-		racine.getChildren().add(label);
-		Scene scene = new Scene(racine, 500, 500);
-		changerScene(scene);
-	}
+
 	protected void changerScene(Scene scene)
 	{
 		scenePrincipale.setScene(scene);
 		scenePrincipale.setTitle("Planet");
 		scenePrincipale.show();
+	}
+	protected void ajouterEvenementModifier(Button boutton,StackPane racine)
+	{
+		boutton.setOnAction(new EventHandler<ActionEvent>() {
+		    public void handle(ActionEvent e) {
+		    	controleur.modifier(racine);
+		    	afficherScenePrincipale();
+		    }});
 	}
 	protected void ajouterEvenementSuprimer(Button boutton, String planete)
 	{
@@ -278,7 +316,7 @@ public class VueOrm extends Application{
 		    	afficherScenePrincipale();
 		    }});
 	}
-	protected void ajouterEvenementValider(Button boutton, StackPane racine)
+	protected void ajouterEvenementAjouter(Button boutton, StackPane racine)
 	{
 		boutton.setOnAction(new EventHandler<ActionEvent>() {
 		    public void handle(ActionEvent e) {

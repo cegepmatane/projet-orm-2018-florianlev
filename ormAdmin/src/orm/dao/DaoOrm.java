@@ -55,7 +55,7 @@ public class DaoOrm {
 
         return listePlanete;
     }
-
+   
     public static void ajouterPlanete(Planete planete)
     {
         Configuration configuration = new Configuration();
@@ -105,7 +105,7 @@ public class DaoOrm {
         Session session = sessionControleur.openSession();
 
         session.beginTransaction();
-        SQLQuery query = session.createSQLQuery("" + "UPDATE exoplanetes SET planete =" + planete.getNom() + ", etoile =" + planete.getEtoile() + ", typeEtoile =" + planete.getTypeEtoile() +", masse =" + planete.getMasse() + ", rayon =" + planete.getMasse() + ", flux=" + planete.getFlux() + ", temperature =" + planete.getTemperature() + ", periode =" + planete.getPeriode() + ", distance =" + planete.getDistance() + ", zone =" + planete.getZone() + ", ist =" + planete.getIst() + ", sph =" + planete.getSph() + ", hzd =" + planete.getHzd() + ", hzc=" + planete.getHzc() + ", hza=" + planete.getHza() + ", pClasse=" + planete.getpClasse() + ", hClasse=" + planete.gethClasse() + ", phi=" + planete.getPhi() + ", distance2=" + ", status=" + planete.getStatus() + ", decouverte=" + planete.getDecouverte() + " WHERE planete =" + planete.getNom());
+        SQLQuery query = session.createSQLQuery("" + "UPDATE exoplanetes SET etoile ='" + planete.getEtoile() + "', typeEtoile ='" + planete.getTypeEtoile() +"', masse ='" + planete.getMasse() + "', rayon ='" + planete.getMasse() + "', flux='" + planete.getFlux() + "', temperature ='" + planete.getTemperature() + "', periode ='" + planete.getPeriode() + "', distance ='" + planete.getDistance() + "', zone ='" + planete.getZone() + "', ist ='" + planete.getIst() + "', sph ='" + planete.getSph() + "', hzd ='" + planete.getHzd() + "', hzc='" + planete.getHzc() + "', hza='" + planete.getHza() + "', pClasse='" + planete.getpClasse() + "', hClasse='" + planete.gethClasse() + "', phi='" + planete.getPhi() + "', distance2='" + "', status='" + planete.getStatus() + "', decouverte='" + planete.getDecouverte() + "' WHERE planete ='" + planete.getNom()+"'");
 
         //SQLQuery query = session.createSQLQuery("" + "UPDATE exoplanetes SET planete = 'ploute' WHERE planete = 'caca'");
 

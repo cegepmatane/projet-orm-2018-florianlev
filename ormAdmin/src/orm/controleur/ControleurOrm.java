@@ -43,6 +43,29 @@ public class ControleurOrm {
 			listeDonnee.add((TextField)racine.getChildren().get(donne));
 			//System.out.println("ok");
 		}
+
+		daoPlanete.ajouterPlanete(creationPlanete(listeDonnee));
+	}
+	public void modifier(StackPane racine)
+	{
+		Planete planete = new Planete();
+		List<TextField> listeDonnee = new ArrayList<TextField>();
+		for(int donne = 1; donne <= 43; donne+=2)
+		{
+			listeDonnee.add((TextField)racine.getChildren().get(donne));
+			//System.out.println("ok");
+		}
+
+		daoPlanete.modifierPlanete(creationPlanete(listeDonnee));
+	}
+	public void suprimer(String planete)
+	{
+		daoPlanete.supprimerPlanete(planete);
+	}
+	protected Planete creationPlanete(List<TextField> listeDonnee)
+	{
+		Planete planete = new Planete();
+		
 		planete.setNom(listeDonnee.get(0).getText());
 		planete.setEtoile(listeDonnee.get(1).getText());
 		planete.setTypeEtoile(listeDonnee.get(2).getText());
@@ -66,10 +89,7 @@ public class ControleurOrm {
 		planete.setDecouverte(listeDonnee.get(20).getText());
 		planete.setpClasse(listeDonnee.get(21).getText());
 		
-		daoPlanete.ajouterPlanete(planete);
+		return planete;
 	}
-	public void suprimer(String planete)
-	{
-		daoPlanete.supprimerPlanete(planete);
-	}
+
 }
