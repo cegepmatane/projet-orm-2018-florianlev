@@ -66,9 +66,19 @@ public class VueOrm extends Application{
 	protected void afficherSceneSuprimer(String planete)
 	{
 		StackPane racine = new StackPane();
-		Label label = new Label(planete);
-		racine.getChildren().add(label);
-		Scene scene = new Scene(racine, 500, 500);
+		Label label = new Label("Voulez-vous vraiment suprimer la planete " + planete + "?");
+		racine.setAlignment(label, Pos.CENTER);
+		
+		Button oui = new Button("oui");
+		this.ajouterEvenementSuprimer(oui, planete);
+		racine.setAlignment(oui, Pos.BOTTOM_LEFT);
+		
+		Button non = new Button("non");
+		this.ajouterEvenementRetour(non);
+		racine.setAlignment(non, Pos.BOTTOM_RIGHT);
+		
+		racine.getChildren().addAll(label, oui, non);
+		Scene scene = new Scene(racine, 300, 100);
 		changerScene(scene);
 	}
 	protected void afficherSceneAjouter()
@@ -259,6 +269,14 @@ public class VueOrm extends Application{
 		scenePrincipale.setScene(scene);
 		scenePrincipale.setTitle("Planet");
 		scenePrincipale.show();
+	}
+	protected void ajouterEvenementSuprimer(Button boutton, String planete)
+	{
+		boutton.setOnAction(new EventHandler<ActionEvent>() {
+		    public void handle(ActionEvent e) {
+		    	controleur.suprimer(planete);
+		    	afficherScenePrincipale();
+		    }});
 	}
 	protected void ajouterEvenementValider(Button boutton, StackPane racine)
 	{

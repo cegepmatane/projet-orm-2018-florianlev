@@ -68,4 +68,8 @@ public class ControleurOrm {
 		
 		daoPlanete.ajouterPlanete(planete);
 	}
+	public void suprimer(String planete)
+	{
+		daoPlanete.supprimerPlanete(planete);
+	}
 }
