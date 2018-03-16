@@ -109,7 +109,7 @@ public class VueOrm extends Application{
 		StackPane racine = new StackPane();
 		racine.setAlignment(Pos.TOP_LEFT);
 		
-		Label nomPage = new Label("Modifer une planete");
+		Label nomPage = new Label("Modifer la planete " + planete);
 		racine.setAlignment(nomPage, Pos.TOP_CENTER);
 		
 		ajouterChamps(racine, true, planete);
@@ -139,145 +139,44 @@ public class VueOrm extends Application{
 			labelNom.setVisible(false);
 			champNom.setVisible(false);
 		}
+		racine.getChildren().addAll(labelNom, champNom);
 		
 		decalageYChamp += decalageY;
 		decalageYLabel += decalageY;
 		
-		Label labelEtoile = createurLabel("(S)Etoile", decalageXLabel, decalageYLabel);
-		TextField champEtoile = createurTextField(decalageXChamp, decalageYChamp);
-
-		decalageYChamp += decalageY;
-		decalageYLabel += decalageY;
+		List<String> listeNom = new ArrayList<String>();
+		listeNom.add("(S)Etoile");
+		listeNom.add("(S)TypeEtoile");
+		listeNom.add("(S)Masse");
+		listeNom.add("(S)Rayon");
+		listeNom.add("(F)Flux");
+		listeNom.add("(S)Temperature");
+		listeNom.add("(F)Periode");
+		listeNom.add("(F)Distance");
+		listeNom.add("(S)Zone");
+		listeNom.add("(F)Ist");
+		listeNom.add("(F)Sph");
+		listeNom.add("(F)Hzd");
+		listeNom.add("(F)Hzc");
+		listeNom.add("(F)Hza");
+		listeNom.add("(S)FClasse");
+		listeNom.add("(S)HClasse");
+		listeNom.add("(S)Phi");
+		listeNom.add("(S)Distance2");
+		listeNom.add("(S)Status");
+		listeNom.add("(S)Decouverte");
+		listeNom.add("(S)PClasse");
 		
-		Label labelTypeEtoile = createurLabel("(S)TypeEtoile", decalageXLabel, decalageYLabel);
-		TextField champTypeEtoile = createurTextField(decalageXChamp, decalageYChamp);
-		
-		decalageYChamp += decalageY;
-		decalageYLabel += decalageY;
-		
-		Label labelMasse = createurLabel("(S)Masse", decalageXLabel, decalageYLabel);
-		TextField champMasse = createurTextField(decalageXChamp, decalageYChamp);
-		
-		decalageYChamp += decalageY;
-		decalageYLabel += decalageY;
-		
-		Label labelRayon = createurLabel("(S)Rayon", decalageXLabel, decalageYLabel);
-		TextField champRayon = createurTextField(decalageXChamp, decalageYChamp);
-		
-		decalageYChamp += decalageY;
-		decalageYLabel += decalageY;
-		
-		Label labelFlux = createurLabel("(F)Flux", decalageXLabel, decalageYLabel);
-		TextField champFlux = createurTextField(decalageXChamp, decalageYChamp);
-		
-		decalageYChamp += decalageY;
-		decalageYLabel += decalageY;
-		
-		Label labelTemperature = createurLabel("(S)Temperature", decalageXLabel, decalageYLabel);
-		TextField champTemperature = createurTextField(decalageXChamp, decalageYChamp);
-		
-		decalageYChamp += decalageY;
-		decalageYLabel += decalageY;
-		
-		Label labelPeriode = createurLabel("(F)Periode", decalageXLabel, decalageYLabel);
-		TextField champPeriode = createurTextField(decalageXChamp, decalageYChamp);
-		
-		decalageYChamp += decalageY;
-		decalageYLabel += decalageY;
-		
-		Label labelDistance = createurLabel("(F)Distance", decalageXLabel, decalageYLabel);
-		TextField champDistance = createurTextField(decalageXChamp, decalageYChamp);
-		
-		decalageYChamp += decalageY;
-		decalageYLabel += decalageY;
-		
-		Label labelZone = createurLabel("(S)Zone", decalageXLabel, decalageYLabel);
-		TextField champZone = createurTextField(decalageXChamp, decalageYChamp);
-		
-		decalageYChamp += decalageY;
-		decalageYLabel += decalageY;
-		
-		Label labelIst = createurLabel("(F)Ist", decalageXLabel, decalageYLabel);
-		TextField champIst = createurTextField(decalageXChamp, decalageYChamp);
-		
-		decalageYChamp += decalageY;
-		decalageYLabel += decalageY;
-		
-		Label labelSph = createurLabel("(F)Sph", decalageXLabel, decalageYLabel);
-		TextField champSph = createurTextField(decalageXChamp, decalageYChamp);
-
-		decalageYChamp += decalageY;
-		decalageYLabel += decalageY;
-		
-		Label labelHzd = createurLabel("(F)Hzd", decalageXLabel, decalageYLabel);
-		TextField champHzd = createurTextField(decalageXChamp, decalageYChamp);
-		
-		decalageYChamp += decalageY;
-		decalageYLabel += decalageY;
-		
-		Label labelHzc = createurLabel("(F)Hzc", decalageXLabel, decalageYLabel);
-		TextField champHzc = createurTextField(decalageXChamp, decalageYChamp);
-		
-		decalageYChamp += decalageY;
-		decalageYLabel += decalageY;
-		
-		Label labelHza = createurLabel("(F)Hza", decalageXLabel, decalageYLabel);
-		TextField champHza = createurTextField(decalageXChamp, decalageYChamp);
-		
-		decalageYChamp += decalageY;
-		decalageYLabel += decalageY;
-		
-		Label labelFClasse = createurLabel("(S)FClasse", decalageXLabel, decalageYLabel);
-		TextField champFClasse = createurTextField(decalageXChamp, decalageYChamp);
-		
-		decalageYChamp += decalageY;
-		decalageYLabel += decalageY;
-		
-		Label labelHClasse = createurLabel("(S)HClasse", decalageXLabel, decalageYLabel);
-		TextField champHClasse = createurTextField(decalageXChamp, decalageYChamp);
-		
-		decalageYChamp += decalageY;
-		decalageYLabel += decalageY;
-		
-		Label labelPhi = createurLabel("(S)Phi", decalageXLabel, decalageYLabel);
-		TextField champPhi = createurTextField(decalageXChamp, decalageYChamp);
-		
-		decalageYChamp += decalageY;
-		decalageYLabel += decalageY;
-		
-		Label labelDistance2 = createurLabel("(S)Distance2", decalageXLabel, decalageYLabel);
-		TextField champDistance2 = createurTextField(decalageXChamp, decalageYChamp);
-		
-		decalageYChamp += decalageY;
-		decalageYLabel += decalageY;
-		
-		Label labelStatus = createurLabel("(S)Status", decalageXLabel, decalageYLabel);
-		TextField champStatus = createurTextField(decalageXChamp, decalageYChamp);
-		
-		decalageYChamp += decalageY;
-		decalageYLabel += decalageY;
-		
-		Label labelDecouverte = createurLabel("(S)Decouverte", decalageXLabel, decalageYLabel);
-		TextField champDecouverte = createurTextField(decalageXChamp, decalageYChamp);
-		
-		decalageYChamp += decalageY;
-		decalageYLabel += decalageY;
-		
-		Label labelPClasse = createurLabel("(S)PClasse", decalageXLabel, decalageYLabel);
-		TextField champPClasse = createurTextField(decalageXChamp, decalageYChamp);
-		
-		
-		//if(!pourModifier){
-			racine.getChildren().addAll(labelNom, champNom, labelEtoile, champEtoile, labelTypeEtoile, champTypeEtoile, labelMasse, champMasse, labelRayon, champRayon, labelFlux, champFlux, labelTemperature, champTemperature,
-					labelPeriode, champPeriode, labelDistance, champDistance, labelZone, champZone, labelIst, champIst, labelSph, champSph, labelHzd ,champHzd, labelHzc ,champHzc, labelHza ,champHza, labelFClasse ,champFClasse, 
-					labelHClasse ,champHClasse, labelPhi ,champPhi, labelDistance2, champDistance2, labelStatus, champStatus, labelDecouverte, champDecouverte, labelPClasse ,champPClasse);
-		/*}
-		else
+		for(int parametre = 0; parametre < listeNom.size(); parametre ++)
 		{
-			racine.getChildren().addAll(labelEtoile, champEtoile, labelTypeEtoile, champTypeEtoile, labelMasse, champMasse, labelRayon, champRayon, labelFlux, champFlux, labelTemperature, champTemperature,
-					labelPeriode, champPeriode, labelDistance, champDistance, labelZone, champZone, labelIst, champIst, labelSph, champSph, labelHzd ,champHzd, labelHzc ,champHzc, labelHza ,champHza, labelFClasse ,champFClasse, 
-					labelHClasse ,champHClasse, labelPhi ,champPhi, labelDistance2, champDistance2, labelStatus, champStatus, labelDecouverte, champDecouverte, labelPClasse ,champPClasse);
-		}*/
+			Label label = createurLabel(listeNom.get(parametre), decalageXLabel, decalageYLabel);
+			TextField champ = createurTextField(decalageXChamp, decalageYChamp);
+			
+			racine.getChildren().addAll(label, champ);
+			
+			decalageYChamp += decalageY;
+			decalageYLabel += decalageY;
+		}
 	}
 	protected TextField createurTextField( int x, int y)
 	{
