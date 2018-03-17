@@ -27,7 +27,29 @@ public class Planete {
 
 	public Planete()
 	{
-
+		super();
+		this.nom = "";
+		this.etoile = "";
+		this.typeEtoile = "";
+		this.masse = "";
+		this.rayon = "";
+		this.flux = 0;
+		this.temperature = "";
+		this.periode = 0;
+		this.distance = 0;
+		this.zone = "";
+		this.ist = 0;
+		this.sph = 0;
+		this.hzd = 0;
+		this.hzc = 0;
+		this.hza = 0;
+		this.fClasse = "";
+		this.hClasse = "";
+		this.phi = "";
+		this.distance2 ="";
+		this.status = "";
+		this.decouverte = "";
+		this.pClasse = "";
 	}
 
 	public String getPhi() {
