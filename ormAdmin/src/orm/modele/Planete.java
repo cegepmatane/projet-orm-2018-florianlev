@@ -1,6 +1,7 @@
 package orm.modele;
 
 public class Planete {
+	protected int id;
 	protected String nom;
 	protected String etoile;
 	protected String typeEtoile;
@@ -78,7 +79,13 @@ public class Planete {
 		this.pClasse = pClasse;
 
 	}*/
+	public int getId() {
+		return id;
+	}
 
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getPhi() {
 		return phi;
 	}
@@ -102,10 +109,6 @@ public class Planete {
 	public void setpClasse(String pClasse) {
 		this.pClasse = pClasse;
 	}
-
-
-
-
 	public String getNom() {
 		return nom;
 	}

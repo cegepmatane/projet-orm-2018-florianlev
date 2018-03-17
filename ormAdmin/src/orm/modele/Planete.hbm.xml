@@ -3,9 +3,10 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-2.0.dtd"><hibernate-mapping>
 
     <class name="orm.modele.Planete" table="exoplanetes">
-        <id name="nom" type="string" column="planete">
+        <id name="id" type="int" column="id">
             <generator class="native"/>
         </id>
+         <property name="nom" type="string" not-null="true" />
         <property name="etoile" type="string" not-null="true" />
 		<property name="typeEtoile" type="string" not-null="true" />
 		<property name="masse" type="string" not-null="true" />

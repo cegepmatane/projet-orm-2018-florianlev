@@ -38,7 +38,7 @@ public class ControleurOrm {
 	{
 		Planete planete = new Planete();
 		List<TextField> listeDonnee = new ArrayList<TextField>();
-		for(int donne = 1; donne <= 39; donne+=2)
+		for(int donne = 1; donne <= 41; donne+=2)
 		{
 			listeDonnee.add((TextField)racine.getChildren().get(donne));
 			//System.out.println("ok");
@@ -50,6 +50,7 @@ public class ControleurOrm {
 	{
 		Planete planete = new Planete();
 		List<TextField> listeDonnee = new ArrayList<TextField>();
+		//System.out.println("ok");
 		for(int donne = 1; donne <= 41; donne+=2)
 		{
 			listeDonnee.add((TextField)racine.getChildren().get(donne));
