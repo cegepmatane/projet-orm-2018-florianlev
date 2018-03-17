@@ -16,18 +16,17 @@ public class Planete {
 	protected float hzd;
 	protected float hzc;
 	protected float hza;
-	protected String fClasse;
+	protected String pClasse;
 	protected String hClasse;
 	protected String phi;
 	protected String distance2;
 	protected String status;
 	protected String decouverte;
-	protected String pClasse;
 
 
 	public Planete()
 	{
-		super();
+		/*super();
 		this.nom = "";
 		this.etoile = "";
 		this.typeEtoile = "";
@@ -43,16 +42,16 @@ public class Planete {
 		this.hzd = 0;
 		this.hzc = 0;
 		this.hza = 0;
-		this.fClasse = "";
+
 		this.hClasse = "";
 		this.phi = "";
 		this.distance2 ="";
 		this.status = "";
 		this.decouverte = "";
-		this.pClasse = "";
+		this.pClasse = "";*/
 	}
 
-	public Planete(String nom, String etoile, String typeEtoile, String masse, String rayon, float flux, String temperature, float periode, float distance, String zone, float ist, float sph, float hzd, float hzc, float hza, String fClasse, String hClasse, String phi, String distance2, String status, String decouverte, String pClasse)
+	/*public Planete(String nom, String etoile, String typeEtoile, String masse, String rayon, float flux, String temperature, float periode, float distance, String zone, float ist, float sph, float hzd, float hzc, float hza, String fClasse, String hClasse, String phi, String distance2, String status, String decouverte, String pClasse)
 	{
 		super();
 		this.nom = nom;
@@ -70,7 +69,7 @@ public class Planete {
 		this.hzd = hzd;
 		this.hzc = hzc;
 		this.hza = hza;
-		this.fClasse = fClasse;
+		this.pClasse = fClasse;
 		this.hClasse = hClasse;
 		this.phi = phi;
 		this.distance2 =distance2;
@@ -78,7 +77,7 @@ public class Planete {
 		this.decouverte = decouverte;
 		this.pClasse = pClasse;
 
-	}
+	}*/
 
 	public String getPhi() {
 		return phi;
@@ -197,12 +196,8 @@ public class Planete {
 	public void setHza(float hza) {
 		this.hza = hza;
 	}
-	public String getfClasse() {
-		return fClasse;
-	}
-	public void setfClasse(String fClasse) {
-		this.fClasse = fClasse;
-	}
+
+
 	public String gethClasse() {
 		return hClasse;
 	}

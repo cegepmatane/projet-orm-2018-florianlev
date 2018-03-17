@@ -20,13 +20,12 @@
         <property name="hzd" type="float" not-null="true" />
         <property name="hzc" type="float" not-null="true" />
         <property name="hza" type="float" not-null="true" />
-        <property name="fClasse" type="string" not-null="true" />
+        <property name="pClasse" type="string" not-null="true" />
         <property name="hClasse" type="string" not-null="true" />
         <property name="phi" type="string" not-null="true" />
         <property name="distance2" type="string" not-null="true" />
         <property name="status" type="string" not-null="true" />
         <property name="decouverte" type="string" not-null="true" />
-        <property name="pClasse" type="string" not-null="true" />
 
 
     </class>

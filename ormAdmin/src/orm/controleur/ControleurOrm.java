@@ -81,7 +81,7 @@ public class ControleurOrm {
 		planete.setHzd(Float.parseFloat(listeDonnee.get(12).getText()));
 		planete.setHzc(Float.parseFloat(listeDonnee.get(13).getText()));
 		planete.setHza(Float.parseFloat(listeDonnee.get(14).getText()));
-		planete.setfClasse(listeDonnee.get(15).getText());
+		planete.setpClasse(listeDonnee.get(15).getText());
 		planete.sethClasse(listeDonnee.get(16).getText());
 		planete.setPhi(listeDonnee.get(17).getText());
 		planete.setDistance2(listeDonnee.get(18).getText());
