@@ -158,7 +158,6 @@ public class VueOrm extends Application{
 		listeNom.add("(F)Hzd");
 		listeNom.add("(F)Hzc");
 		listeNom.add("(F)Hza");
-		listeNom.add("(S)FClasse");
 		listeNom.add("(S)HClasse");
 		listeNom.add("(S)Phi");
 		listeNom.add("(S)Distance2");

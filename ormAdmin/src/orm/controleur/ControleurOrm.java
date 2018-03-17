@@ -38,7 +38,7 @@ public class ControleurOrm {
 	{
 		Planete planete = new Planete();
 		List<TextField> listeDonnee = new ArrayList<TextField>();
-		for(int donne = 1; donne <= 43; donne+=2)
+		for(int donne = 1; donne <= 39; donne+=2)
 		{
 			listeDonnee.add((TextField)racine.getChildren().get(donne));
 			//System.out.println("ok");
@@ -50,7 +50,7 @@ public class ControleurOrm {
 	{
 		Planete planete = new Planete();
 		List<TextField> listeDonnee = new ArrayList<TextField>();
-		for(int donne = 1; donne <= 43; donne+=2)
+		for(int donne = 1; donne <= 41; donne+=2)
 		{
 			listeDonnee.add((TextField)racine.getChildren().get(donne));
 			//System.out.println("ok");
@@ -81,13 +81,12 @@ public class ControleurOrm {
 		planete.setHzd(Float.parseFloat(listeDonnee.get(12).getText()));
 		planete.setHzc(Float.parseFloat(listeDonnee.get(13).getText()));
 		planete.setHza(Float.parseFloat(listeDonnee.get(14).getText()));
-		planete.setpClasse(listeDonnee.get(15).getText());
-		planete.sethClasse(listeDonnee.get(16).getText());
-		planete.setPhi(listeDonnee.get(17).getText());
-		planete.setDistance2(listeDonnee.get(18).getText());
-		planete.setStatus(listeDonnee.get(19).getText());
-		planete.setDecouverte(listeDonnee.get(20).getText());
-		planete.setpClasse(listeDonnee.get(21).getText());
+		planete.sethClasse(listeDonnee.get(15).getText());
+		planete.setPhi(listeDonnee.get(16).getText());
+		planete.setDistance2(listeDonnee.get(17).getText());
+		planete.setStatus(listeDonnee.get(18).getText());
+		planete.setDecouverte(listeDonnee.get(19).getText());
+		planete.setpClasse(listeDonnee.get(20).getText());
 		
 		return planete;
 	}
