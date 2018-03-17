@@ -57,7 +57,6 @@ public class VueOrm extends Application{
 		
 		afficherPanetes(racine);	
 		
-		
 		ScrollPane scroll = new ScrollPane();
 		scroll.setContent(racine);
 		Scene scene = new Scene(scroll, 500, 500);
