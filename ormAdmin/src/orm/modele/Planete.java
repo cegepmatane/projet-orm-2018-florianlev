@@ -52,6 +52,34 @@ public class Planete {
 		this.pClasse = "";
 	}
 
+	public Planete(String nom, String etoile, String typeEtoile, String masse, String rayon, float flux, String temperature, float periode, float distance, String zone, float ist, float sph, float hzd, float hzc, float hza, String fClasse, String hClasse, String phi, String distance2, String status, String decouverte, String pClasse)
+	{
+		super();
+		this.nom = nom;
+		this.etoile = etoile;
+		this.typeEtoile = typeEtoile;
+		this.masse = masse;
+		this.rayon = rayon;
+		this.flux = flux;
+		this.temperature = temperature;
+		this.periode = periode;
+		this.distance = distance;
+		this.zone = zone;
+		this.ist = ist;
+		this.sph = sph;
+		this.hzd = hzd;
+		this.hzc = hzc;
+		this.hza = hza;
+		this.fClasse = fClasse;
+		this.hClasse = hClasse;
+		this.phi = phi;
+		this.distance2 =distance2;
+		this.status = status;
+		this.decouverte = decouverte;
+		this.pClasse = pClasse;
+
+	}
+
 	public String getPhi() {
 		return phi;
 	}
