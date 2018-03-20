@@ -26,8 +26,14 @@ import orm.modele.Planete;
 public class VueOrm extends Application{
 	protected List<Planete> listePlanete;
 	protected ControleurOrm controleur;
-	protected Stage scenePrincipale; 
-	
+	protected Stage scenePrincipale;
+
+	public VueOrm(int dummy)
+	{
+		listePlanete = null;
+		controleur = null;
+	}
+
 	public VueOrm()
 	{
 		listePlanete = null;
@@ -62,14 +68,14 @@ public class VueOrm extends Application{
 		Scene scene = new Scene(scroll, 500, 500);
 		changerScene(scene);
 	}
-	protected void afficherSceneSuprimer(String planete)
+	protected void afficherSceneSuprimer(int id)
 	{
 		StackPane racine = new StackPane();
-		Label label = new Label("Voulez-vous vraiment suprimer la planete " + planete + "?");
+		Label label = new Label("Voulez-vous vraiment suprimer la planete " + id + "?");
 		racine.setAlignment(label, Pos.CENTER);
 		
 		Button oui = new Button("oui");
-		this.ajouterEvenementSuprimer(oui, planete);
+		this.ajouterEvenementSuprimer(oui, id);
 		racine.setAlignment(oui, Pos.BOTTOM_LEFT);
 		
 		Button non = new Button("non");
@@ -202,7 +208,7 @@ public class VueOrm extends Application{
 		    	afficherScenePrincipale();
 		    }});
 	}
-	protected void ajouterEvenementSuprimer(Button boutton, String planete)
+	protected void ajouterEvenementSuprimer(Button boutton, int planete)
 	{
 		boutton.setOnAction(new EventHandler<ActionEvent>() {
 		    public void handle(ActionEvent e) {
@@ -230,7 +236,7 @@ public class VueOrm extends Application{
 		boutton.setOnAction(new EventHandler<ActionEvent>() {
 		    public void handle(ActionEvent e) {
 		    	Button boutton = (Button)e.getSource();
-		    	 afficherSceneSuprimer(boutton.getId());
+		    	 afficherSceneSuprimer( Integer.parseInt(boutton.getId()));
 		    }});
 	}
 	protected void ajouterEvenementAjouter(Button boutton)
@@ -246,7 +252,7 @@ public class VueOrm extends Application{
 		boutton.setOnAction(new EventHandler<ActionEvent>() {
 		    public void handle(ActionEvent e) {
 		    	Button boutton = (Button)e.getSource();
-		    	 afficherSceneModifier(boutton.getId());
+		    	 afficherSceneModifier((boutton.getId()));
 		    }});
 	}
 	protected void afficherPanetes(VBox racine)
@@ -262,7 +268,7 @@ public class VueOrm extends Application{
 			labelPlanet.setTranslateX(0);
 			labelPlanet.setTranslateY(decalage);
 			
-			bouttonSuprimer.setId(listePlanete.get(position).getNom());
+			bouttonSuprimer.setId(String.valueOf(listePlanete.get(position).getId()));
 			bouttonSuprimer.setTranslateX(100);
 			bouttonSuprimer.setTranslateY(decalage-25);
 			this.ajouterEvenementSuprimmer(bouttonSuprimer);

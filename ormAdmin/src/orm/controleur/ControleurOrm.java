@@ -59,9 +59,9 @@ public class ControleurOrm {
 
 		//daoPlanete.modifierPlanete(creationPlanete(listeDonnee));
 	}
-	public void suprimer(String planete)
+	public void suprimer(int id)
 	{
-		daoPlanete.supprimerPlanete(planete);
+		daoPlanete.supprimerPlanete(id);
 	}
 	protected Planete creationPlanete(List<TextField> listeDonnee)
 	{
