@@ -32,25 +32,13 @@ public class DaoOrm {
     public List<Planete> getRecherchePlanete ()
     {
         Transaction operation = null;
-        try
-        {
-            operation = session.beginTransaction();
-            Planete planeteTest = new Planete();
-            session.save(planeteTest);
-        }
-        catch (Exception e)
-        {
-            if (operation != null) operation.rollback();
-        }
-
+        
         Iterator iterateurPlanete = session.createQuery("from Planete").iterate();
 
         while (iterateurPlanete.hasNext())
         {
             listePlanete.add((Planete)iterateurPlanete.next());
         }
-
-
 
         return listePlanete;
     }
@@ -60,7 +48,7 @@ public class DaoOrm {
         session.save(planete);
     }
 
-    public void modifierPlanete(Planete planete) {
+    /*public void modifierPlanete(Planete planete) {
 
 
         Configuration configuration = new Configuration();
@@ -76,7 +64,7 @@ public class DaoOrm {
 
         query.executeUpdate();
         session.getTransaction();
-    }
+    }*/
 
 
     public void supprimerPlanete(String planete) {

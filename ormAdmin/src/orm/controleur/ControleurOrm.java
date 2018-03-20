@@ -38,7 +38,7 @@ public class ControleurOrm {
 	{
 		Planete planete = new Planete();
 		List<TextField> listeDonnee = new ArrayList<TextField>();
-		for(int donne = 1; donne <= 41; donne+=2)
+		for(int donne = 1; donne <= 35; donne+=2)
 		{
 			listeDonnee.add((TextField)racine.getChildren().get(donne));
 			//System.out.println("ok");
@@ -57,7 +57,7 @@ public class ControleurOrm {
 			//System.out.println("ok");
 		}
 
-		daoPlanete.modifierPlanete(creationPlanete(listeDonnee));
+		//daoPlanete.modifierPlanete(creationPlanete(listeDonnee));
 	}
 	public void suprimer(String planete)
 	{
@@ -72,22 +72,19 @@ public class ControleurOrm {
 		planete.setTypeEtoile(listeDonnee.get(2).getText());
 		planete.setMasse(listeDonnee.get(3).getText());
 		planete.setRayon(listeDonnee.get(4).getText());
-		planete.setFlux(Float.parseFloat(listeDonnee.get(5).getText()));
+		planete.setFlux(listeDonnee.get(5).getText());
 		planete.setTemperature(listeDonnee.get(6).getText());
-		planete.setPeriode(Float.parseFloat(listeDonnee.get(7).getText()));
-		planete.setDistance(Float.parseFloat(listeDonnee.get(8).getText()));
+		planete.setPeriode(listeDonnee.get(7).getText());
+		planete.setDistance(listeDonnee.get(8).getText());
 		planete.setZone(listeDonnee.get(9).getText());
-		planete.setIst(Float.parseFloat(listeDonnee.get(10).getText()));
-		planete.setSph(Float.parseFloat(listeDonnee.get(11).getText()));
-		planete.setHzd(Float.parseFloat(listeDonnee.get(12).getText()));
-		planete.setHzc(Float.parseFloat(listeDonnee.get(13).getText()));
-		planete.setHza(Float.parseFloat(listeDonnee.get(14).getText()));
-		planete.sethClasse(listeDonnee.get(15).getText());
-		planete.setPhi(listeDonnee.get(16).getText());
-		planete.setDistance2(listeDonnee.get(17).getText());
-		planete.setStatus(listeDonnee.get(18).getText());
-		planete.setDecouverte(listeDonnee.get(19).getText());
-		planete.setpClasse(listeDonnee.get(20).getText());
+		planete.setHzd(listeDonnee.get(10).getText());
+		planete.setHzc(listeDonnee.get(11).getText());
+		planete.setHza(listeDonnee.get(12).getText());
+		planete.sethClasse(listeDonnee.get(13).getText());
+		planete.setDistance2(listeDonnee.get(14).getText());
+		planete.setStatus(listeDonnee.get(15).getText());
+		planete.setDecouverte(listeDonnee.get(16).getText());
+		planete.setpClasse(listeDonnee.get(17).getText());
 		
 		return planete;
 	}

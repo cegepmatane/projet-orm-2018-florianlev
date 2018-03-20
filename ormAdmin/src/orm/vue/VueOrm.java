@@ -30,7 +30,7 @@ public class VueOrm extends Application{
 	
 	public VueOrm()
 	{
-		listePlanete = new ArrayList<>();
+		listePlanete = null;
 		controleur = new ControleurOrm(this);
 	}
 	
@@ -153,13 +153,10 @@ public class VueOrm extends Application{
 		listeNom.add("(F)Periode");
 		listeNom.add("(F)Distance");
 		listeNom.add("(S)Zone");
-		listeNom.add("(F)Ist");
-		listeNom.add("(F)Sph");
 		listeNom.add("(F)Hzd");
 		listeNom.add("(F)Hzc");
 		listeNom.add("(F)Hza");
 		listeNom.add("(S)HClasse");
-		listeNom.add("(S)Phi");
 		listeNom.add("(S)Distance2");
 		listeNom.add("(S)Status");
 		listeNom.add("(S)Decouverte");
@@ -259,7 +256,7 @@ public class VueOrm extends Application{
 		for(int position = listePlanete.size()-1;position >= 0; position--)
 		{
 			Label labelPlanet =  new Label(listePlanete.get(position).getNom());
-			Button bouttonSuprimer = new Button("Suprimer");
+			Button bouttonSuprimer = new Button("Supprimer");
 			Button bouttonModifier = new Button("Modifier");
 			
 			labelPlanet.setTranslateX(0);
