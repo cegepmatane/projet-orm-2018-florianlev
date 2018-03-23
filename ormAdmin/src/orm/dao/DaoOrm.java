@@ -40,6 +40,10 @@ public class DaoOrm {
 
     }
 
+    public void updatePlanete(Planete planete)
+    {
+    }
+
     public List<Planete> getRecherchePlanete ()
     {
 
