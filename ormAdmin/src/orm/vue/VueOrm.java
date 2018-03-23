@@ -50,7 +50,6 @@ public class VueOrm extends Application{
 	}
 	protected void afficherScenePrincipale()
 	{
-		listePlanete = controleur.getListePlanete();
 		VBox racine = new VBox();
 		racine.setAlignment(Pos.TOP_LEFT);
 		Button bouttonAjouter = new Button();
@@ -106,10 +105,10 @@ public class VueOrm extends Application{
 		
 		racine.getChildren().addAll(nomPage, valider, retour);
 		
-		Scene scene = new Scene(racine, 500, 705);
+		Scene scene = new Scene(racine, 500, 600);
 		changerScene(scene);
 	}
-	protected void afficherSceneModifier(String planete)
+	/*protected void afficherSceneModifier(String planete)
 	{
 		StackPane racine = new StackPane();
 		racine.setAlignment(Pos.TOP_LEFT);
@@ -131,7 +130,7 @@ public class VueOrm extends Application{
 		
 		Scene scene = new Scene(racine, 500, 705);
 		changerScene(scene);
-	}
+	}*/
 	protected void ajouterChamps(StackPane racine, boolean pourModifier, String planete)
 	{
 		int decalageYChamp = 20, decalageYLabel = 25, decalageY = 30, decalageXChamp = 100, decalageXLabel = 0; 
@@ -139,11 +138,11 @@ public class VueOrm extends Application{
 		
 		Label labelNom = createurLabel("(S)nom", decalageXLabel, decalageYLabel);
 		TextField champNom = createurTextField(decalageXChamp, decalageYChamp);
-		if(pourModifier){
+		/*if(pourModifier){
 			champNom.setText(planete);
 			labelNom.setVisible(false);
 			champNom.setVisible(false);
-		}
+		}*/
 		racine.getChildren().addAll(labelNom, champNom);
 		
 		decalageYChamp += decalageY;
@@ -200,14 +199,14 @@ public class VueOrm extends Application{
 		scenePrincipale.setTitle("Planet");
 		scenePrincipale.show();
 	}
-	protected void ajouterEvenementModifier(Button boutton,StackPane racine)
+	/*protected void ajouterEvenementModifier(Button boutton,StackPane racine)
 	{
 		boutton.setOnAction(new EventHandler<ActionEvent>() {
 		    public void handle(ActionEvent e) {
 		    	controleur.modifier(racine);
 		    	afficherScenePrincipale();
 		    }});
-	}
+	}*/
 	protected void ajouterEvenementSuprimer(Button boutton, int planete)
 	{
 		boutton.setOnAction(new EventHandler<ActionEvent>() {
@@ -246,7 +245,7 @@ public class VueOrm extends Application{
 		    	afficherSceneAjouter();
 		    }});
 	}
-	protected void ajouterEvenementModifier(Button boutton)
+	/*protected void ajouterEvenementModifier(Button boutton)
 	{
 
 		boutton.setOnAction(new EventHandler<ActionEvent>() {
@@ -254,7 +253,7 @@ public class VueOrm extends Application{
 		    	Button boutton = (Button)e.getSource();
 		    	 afficherSceneModifier((boutton.getId()));
 		    }});
-	}
+	}*/
 	protected void afficherPanetes(VBox racine)
 	{
 		int decalage = 80;
@@ -263,7 +262,7 @@ public class VueOrm extends Application{
 		{
 			Label labelPlanet =  new Label(listePlanete.get(position).getNom());
 			Button bouttonSuprimer = new Button("Supprimer");
-			Button bouttonModifier = new Button("Modifier");
+			//Button bouttonModifier = new Button("Modifier");
 			
 			labelPlanet.setTranslateX(0);
 			labelPlanet.setTranslateY(decalage);
@@ -273,12 +272,20 @@ public class VueOrm extends Application{
 			bouttonSuprimer.setTranslateY(decalage-25);
 			this.ajouterEvenementSuprimmer(bouttonSuprimer);
 			
-			bouttonModifier.setId(listePlanete.get(position).getNom());
-			bouttonModifier.setTranslateX(200);
-			bouttonModifier.setTranslateY(decalage-50);
-			this.ajouterEvenementModifier(bouttonModifier);
+			//bouttonModifier.setId(listePlanete.get(position).getNom());
+			//bouttonModifier.setTranslateX(200);
+			//bouttonModifier.setTranslateY(decalage-50);
+			//this.ajouterEvenementModifier(bouttonModifier);
 
-			racine.getChildren().addAll(labelPlanet, bouttonSuprimer, bouttonModifier);
+			racine.getChildren().addAll(labelPlanet, bouttonSuprimer/*, bouttonModifier*/);
 		}
+	}
+
+	public List<Planete> getListePlanete() {
+		return listePlanete;
+	}
+
+	public void setListePlanete(List<Planete> listePlanete) {
+		this.listePlanete = listePlanete;
 	}
 }

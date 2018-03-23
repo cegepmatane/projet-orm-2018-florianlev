@@ -30,6 +30,7 @@ public class ControleurOrm {
 		//daoPlanete.modifierPlanete();
 
 		listePlanete = daoPlanete.getRecherchePlanete();
+		vue.setListePlanete(daoPlanete.getRecherchePlanete());
 	}
 	public List<Planete> getListePlanete() {
 		return daoPlanete.getRecherchePlanete();
@@ -45,8 +46,9 @@ public class ControleurOrm {
 		}
 
 		daoPlanete.ajouterPlanete(creationPlanete(listeDonnee));
+		vue.setListePlanete(daoPlanete.getRecherchePlanete());
 	}
-	public void modifier(StackPane racine)
+	/*public void modifier(StackPane racine)
 	{
 		Planete planete = new Planete();
 		List<TextField> listeDonnee = new ArrayList<TextField>();
@@ -58,10 +60,11 @@ public class ControleurOrm {
 		}
 
 		//daoPlanete.modifierPlanete(creationPlanete(listeDonnee));
-	}
+	}*/
 	public void suprimer(int id)
 	{
 		daoPlanete.supprimerPlanete(id);
+		vue.setListePlanete(daoPlanete.getRecherchePlanete());
 	}
 	protected Planete creationPlanete(List<TextField> listeDonnee)
 	{
