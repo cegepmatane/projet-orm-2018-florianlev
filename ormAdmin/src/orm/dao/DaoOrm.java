@@ -40,9 +40,6 @@ public class DaoOrm {
 
     }
 
-    public void updatePlanete(Planete planete)
-    {
-    }
 
     public List<Planete> getRecherchePlanete ()
     {
@@ -72,23 +69,6 @@ public class DaoOrm {
 
     }
 
-    /*public void modifierPlanete(Planete planete) {
-
-
-        Configuration configuration = new Configuration();
-        configuration.addClass(Planete.class);
-
-        SessionFactory sessionControleur = configuration.buildSessionFactory();
-        Session session = sessionControleur.openSession();
-
-        session.beginTransaction();
-        SQLQuery query = session.createSQLQuery("" + "UPDATE exoplanetes SET etoile ='" + planete.getEtoile() + "', typeEtoile ='" + planete.getTypeEtoile() +"', masse ='" + planete.getMasse() + "', rayon ='" + planete.getMasse() + "', flux='" + planete.getFlux() + "', temperature ='" + planete.getTemperature() + "', periode ='" + planete.getPeriode() + "', distance ='" + planete.getDistance() + "', zone ='" + planete.getZone() + "', ist ='" + planete.getIst() + "', sph ='" + planete.getSph() + "', hzd ='" + planete.getHzd() + "', hzc='" + planete.getHzc() + "', hza='" + planete.getHza() + "', pClasse='" + planete.getpClasse() + "', hClasse='" + planete.gethClasse() + "', phi='" + planete.getPhi() + "', distance2='" + "', status='" + planete.getStatus() + "', decouverte='" + planete.getDecouverte() + "' WHERE planete ='" + planete.getNom()+"'");
-
-        //SQLQuery query = session.createSQLQuery("" + "UPDATE exoplanetes SET planete = 'ploute' WHERE planete = 'caca'");
-
-        query.executeUpdate();
-        session.getTransaction();
-    }*/
 
 
     public void supprimerPlanete(int id) {

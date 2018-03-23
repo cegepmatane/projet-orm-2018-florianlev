@@ -22,7 +22,7 @@
           <file leaf-file-name="App.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/orm/App.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="154">
+                <state relative-caret-position="180">
                   <caret line="9" column="38" lean-forward="false" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
                   <folding />
                 </state>
@@ -52,8 +52,8 @@
           <file leaf-file-name="DaoOrm.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/orm/dao/DaoOrm.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="336">
-                  <caret line="93" column="42" lean-forward="true" selection-start-line="93" selection-start-column="42" selection-end-line="93" selection-end-column="42" />
+                <state relative-caret-position="-320">
+                  <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -64,13 +64,11 @@
           <file leaf-file-name="ControleurOrm.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/orm/controleur/ControleurOrm.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1080">
-                  <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+                <state relative-caret-position="1120">
+                  <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#853#854#0" expanded="true" />
-                    <element signature="e#899#900#0" expanded="true" />
-                    <element signature="e#1698#1699#0" expanded="true" />
+                    <element signature="e#1873#1874#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -83,10 +81,6 @@
                   <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#6671#6672#0" expanded="true" />
-                    <element signature="e#6713#6714#0" expanded="true" />
-                    <element signature="e#7163#7164#0" expanded="true" />
-                    <element signature="e#7202#7203#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -234,48 +228,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="ormAdmin" type="58d84e3e:PackageViewProjectNode" />
-              <item name="projet-orm-2018-florianlev" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="ormAdmin" type="58d84e3e:PackageViewProjectNode" />
-              <item name="projet-orm-2018-florianlev" type="616d4139:PackageViewModuleNode" />
-              <item name="orm" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="ormAdmin" type="58d84e3e:PackageViewProjectNode" />
-              <item name="projet-orm-2018-florianlev" type="616d4139:PackageViewModuleNode" />
-              <item name="orm" type="1f31426a:PackageElementNode" />
-              <item name="controleur" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="ormAdmin" type="58d84e3e:PackageViewProjectNode" />
-              <item name="projet-orm-2018-florianlev" type="616d4139:PackageViewModuleNode" />
-              <item name="orm" type="1f31426a:PackageElementNode" />
-              <item name="dao" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="ormAdmin" type="58d84e3e:PackageViewProjectNode" />
-              <item name="projet-orm-2018-florianlev" type="616d4139:PackageViewModuleNode" />
-              <item name="orm" type="1f31426a:PackageElementNode" />
-              <item name="modele" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="ormAdmin" type="58d84e3e:PackageViewProjectNode" />
-              <item name="projet-orm-2018-florianlev" type="616d4139:PackageViewModuleNode" />
-              <item name="orm" type="1f31426a:PackageElementNode" />
-              <item name="vue" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -326,7 +279,48 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ormAdmin" type="58d84e3e:PackageViewProjectNode" />
+              <item name="projet-orm-2018-florianlev" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="ormAdmin" type="58d84e3e:PackageViewProjectNode" />
+              <item name="projet-orm-2018-florianlev" type="616d4139:PackageViewModuleNode" />
+              <item name="orm" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="ormAdmin" type="58d84e3e:PackageViewProjectNode" />
+              <item name="projet-orm-2018-florianlev" type="616d4139:PackageViewModuleNode" />
+              <item name="orm" type="1f31426a:PackageElementNode" />
+              <item name="controleur" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="ormAdmin" type="58d84e3e:PackageViewProjectNode" />
+              <item name="projet-orm-2018-florianlev" type="616d4139:PackageViewModuleNode" />
+              <item name="orm" type="1f31426a:PackageElementNode" />
+              <item name="dao" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="ormAdmin" type="58d84e3e:PackageViewProjectNode" />
+              <item name="projet-orm-2018-florianlev" type="616d4139:PackageViewModuleNode" />
+              <item name="orm" type="1f31426a:PackageElementNode" />
+              <item name="modele" type="1f31426a:PackageElementNode" />
+            </path>
+            <path>
+              <item name="ormAdmin" type="58d84e3e:PackageViewProjectNode" />
+              <item name="projet-orm-2018-florianlev" type="616d4139:PackageViewModuleNode" />
+              <item name="orm" type="1f31426a:PackageElementNode" />
+              <item name="vue" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -470,7 +464,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="728" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -485,7 +478,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15402476" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15712075" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -541,10 +534,6 @@
           <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6671#6672#0" expanded="true" />
-            <element signature="e#6713#6714#0" expanded="true" />
-            <element signature="e#7163#7164#0" expanded="true" />
-            <element signature="e#7202#7203#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -640,9 +629,7 @@
           <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#853#854#0" expanded="true" />
-            <element signature="e#899#900#0" expanded="true" />
-            <element signature="e#1698#1699#0" expanded="true" />
+            <element signature="e#1873#1874#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -687,9 +674,7 @@
           <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#853#854#0" expanded="true" />
-            <element signature="e#899#900#0" expanded="true" />
-            <element signature="e#1698#1699#0" expanded="true" />
+            <element signature="e#1873#1874#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -785,10 +770,6 @@
           <caret line="45" column="23" lean-forward="false" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6671#6672#0" expanded="true" />
-            <element signature="e#6713#6714#0" expanded="true" />
-            <element signature="e#7163#7164#0" expanded="true" />
-            <element signature="e#7202#7203#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -823,9 +804,7 @@
           <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#853#854#0" expanded="true" />
-            <element signature="e#899#900#0" expanded="true" />
-            <element signature="e#1698#1699#0" expanded="true" />
+            <element signature="e#1873#1874#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -836,10 +815,6 @@
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6671#6672#0" expanded="true" />
-            <element signature="e#6713#6714#0" expanded="true" />
-            <element signature="e#7163#7164#0" expanded="true" />
-            <element signature="e#7202#7203#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -979,9 +954,7 @@
           <caret line="15" column="41" lean-forward="false" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#853#854#0" expanded="true" />
-            <element signature="e#899#900#0" expanded="true" />
-            <element signature="e#1698#1699#0" expanded="true" />
+            <element signature="e#1873#1874#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -992,10 +965,6 @@
           <caret line="4" column="34" lean-forward="false" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6671#6672#0" expanded="true" />
-            <element signature="e#6713#6714#0" expanded="true" />
-            <element signature="e#7163#7164#0" expanded="true" />
-            <element signature="e#7202#7203#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1125,10 +1094,6 @@
           <caret line="4" column="34" lean-forward="true" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6671#6672#0" expanded="true" />
-            <element signature="e#6713#6714#0" expanded="true" />
-            <element signature="e#7163#7164#0" expanded="true" />
-            <element signature="e#7202#7203#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1224,9 +1189,7 @@
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#853#854#0" expanded="true" />
-            <element signature="e#899#900#0" expanded="true" />
-            <element signature="e#1698#1699#0" expanded="true" />
+            <element signature="e#1873#1874#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1271,9 +1234,7 @@
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#853#854#0" expanded="true" />
-            <element signature="e#899#900#0" expanded="true" />
-            <element signature="e#1698#1699#0" expanded="true" />
+            <element signature="e#1873#1874#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1369,10 +1330,6 @@
           <caret line="21" column="38" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6671#6672#0" expanded="true" />
-            <element signature="e#6713#6714#0" expanded="true" />
-            <element signature="e#7163#7164#0" expanded="true" />
-            <element signature="e#7202#7203#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1496,13 +1453,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/orm/controleur/ControleurOrm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+        <state relative-caret-position="1120">
+          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#853#854#0" expanded="true" />
-            <element signature="e#899#900#0" expanded="true" />
-            <element signature="e#1698#1699#0" expanded="true" />
+            <element signature="e#1873#1874#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1513,10 +1468,6 @@
           <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6671#6672#0" expanded="true" />
-            <element signature="e#6713#6714#0" expanded="true" />
-            <element signature="e#7163#7164#0" expanded="true" />
-            <element signature="e#7202#7203#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1531,7 +1482,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/orm/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
+        <state relative-caret-position="180">
           <caret line="9" column="38" lean-forward="false" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
           <folding />
         </state>
@@ -1539,8 +1490,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/orm/dao/DaoOrm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="93" column="42" lean-forward="true" selection-start-line="93" selection-start-column="42" selection-end-line="93" selection-end-column="42" />
+        <state relative-caret-position="-320">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
