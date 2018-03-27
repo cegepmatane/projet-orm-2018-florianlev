@@ -28,6 +28,7 @@ public class VueOrm extends Application{
 	protected ControleurOrm controleur;
 	protected Stage scenePrincipale;
 
+
 	public VueOrm(int dummy)
 	{
 		listePlanete = null;

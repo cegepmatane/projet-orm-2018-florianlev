@@ -12,6 +12,8 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import orm.controleur.ControleurOrm;
 import orm.modele.Planete;
+import javafx.scene.control.Tab;
+import javafx.scene.control.TabPane;
 
 public class VueOrm extends Application{
 	protected List<Planete> listePlanete;
@@ -19,7 +21,12 @@ public class VueOrm extends Application{
 	protected StackPane racine;
 	protected Alert alerte;
 	protected Alert alerteContinent;
-	protected Stage scenePrincipale; 
+	protected Stage scenePrincipale;
+	protected TabPane tabPane;
+
+	protected Tab ongletlistePlanete;
+	protected Tab marquePage;
+	protected Tab recherche;
 	
 	public VueOrm()
 	{
@@ -35,10 +42,22 @@ public class VueOrm extends Application{
 		StackPane racine = new StackPane();
 		afficherPanetes(racine);		
 		Scene scene = new Scene(racine, 500, 500);
+
+		TabPane tabPane = new TabPane();
+		ongletlistePlanete = new Tab("");
+		tabPane.getTabs().add(ongletlistePlanete);
+
+		marquePage = new Tab("");
+		tabPane.getTabs().add(marquePage);
+
+		recherche = new Tab("");
+		tabPane.getTabs().add(recherche);
 		
 		scenePrincipale.setScene(scene);
 		scenePrincipale.setTitle("Planet");
 		scenePrincipale.show();
+
+		controleur.afficherOnglets();
 	}
 	public void afficherPanetes(StackPane racine)
 	{
