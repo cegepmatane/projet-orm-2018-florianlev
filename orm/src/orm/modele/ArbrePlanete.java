@@ -1,5 +1,8 @@
 package orm.modele;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ArbrePlanete {
 	
 	protected Noeud noeud;
@@ -53,19 +56,21 @@ public class ArbrePlanete {
 			}
 		}
 	}
-	public void afficher()
+	List<Planete> liste = new ArrayList<Planete>();
+	public List<Planete> retournerListe()
 	{
-		afficher(this.noeud);
+		this.chercherPlanete(this.noeud);
+		return liste;
 	}
-	protected void afficher(Noeud noeud)
+	protected void chercherPlanete(Noeud noeud)
 	{
 		if (null == noeud) 
 			return;
         if (null != noeud.gauche)
-        	afficher(noeud.gauche);
-        System.out.println(noeud.planete.getNom());
+        	chercherPlanete(noeud.gauche);
+        liste.add(noeud.planete);
         if (null != noeud.droite) 
-        	afficher(noeud.droite);
+        	chercherPlanete(noeud.droite);
 	}
 	private int recupererValeur(Planete planete)
 	{

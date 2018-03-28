@@ -3,6 +3,8 @@ import java.util.Iterator;
 
 import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
+
+import orm.modele.ArbrePlanete;
 import orm.modele.Planete;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,15 +16,12 @@ import orm.modele.Planete;
 
 public class DaoOrm {
 
-	protected List<Planete> listePlanete;
-
-
+	ArbrePlanete arbrePlanete;
     public DaoOrm() {
-
-        listePlanete = new ArrayList<>();
+    	arbrePlanete = new ArbrePlanete();;
     }
 
-    public List<Planete> getRecherchePlanete ()
+    public ArbrePlanete getRecherchePlanete ()
     {
         Configuration configuration = new Configuration();
         configuration.addClass(Planete.class);
@@ -46,13 +45,14 @@ public class DaoOrm {
 
         while (iterateurPlanete.hasNext())
         {
-            listePlanete.add((Planete)iterateurPlanete.next());
+        	Planete planete = (Planete)iterateurPlanete.next();
+        	if(null!=planete)arbrePlanete.ajouter(planete);
         }
         
         session.close();
         sessionControleur.close();
 
-        return listePlanete;
+        return arbrePlanete;
     }
 
 

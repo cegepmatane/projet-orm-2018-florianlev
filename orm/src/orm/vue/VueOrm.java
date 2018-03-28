@@ -57,7 +57,7 @@ public class VueOrm extends Application{
 		scenePrincipale.setTitle("Planet");
 		scenePrincipale.show();
 
-		controleur.afficherOnglets();
+		//controleur.afficherOnglets();
 	}
 	public void afficherPanetes(StackPane racine)
 	{
