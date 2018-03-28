@@ -22,18 +22,6 @@ public class DaoOrm {
         SessionFactory sessionControleur = configuration.buildSessionFactory();
         Session session = sessionControleur.openSession();
 
-        Transaction operation = null;
-        try
-        {
-            operation = session.beginTransaction();
-            Planete planeteTest = new Planete();
-            session.save(planeteTest);
-        }
-        catch (Exception e)
-        {
-            if (operation != null) operation.rollback();
-        }
-
         Iterator iterateurPlanete = session.createQuery("from Planete").iterate();
 
         while (iterateurPlanete.hasNext())

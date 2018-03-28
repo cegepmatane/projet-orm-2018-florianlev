@@ -3,13 +3,30 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-2.0.dtd"><hibernate-mapping>
 
     <class name="orm.modele.Planete" table="exoplanetes">
-        <id name="nom" type="string" column="planete">
+        <id name="id" type="int" column="id">
             <generator class="native"/>
         </id>
-        <property name="etoile" type="string" not-null="true" />
-		<property name="temperature" type="string" not-null="true" />
-		<property name="flux" type="float" not-null="true" />
-		<property name="distance" type="float" not-null="true" />
-		<property name="periode" type="float" not-null="true" />
+        <property name="nom" type="string" column="planete"/>
+        <property name="etoile" type="string"  />
+		<property name="typeEtoile" type="string"  />
+		<property name="masse" type="string"  />
+		<property name="rayon" type="string" />
+		<property name="flux" type="string" />
+        <property name="temperature" type="string"  />
+        <property name="periode" type="string"  />
+        <property name="distance" type="string"  />
+        <property name="zone" type="string" />
+
+        <property name="hzd" type="string"  />
+        <property name="hzc" type="string"  />
+        <property name="hza" type="string"  />
+        <property name="pClasse" type="string" />
+        <property name="hClasse" type="string"  />
+
+        <property name="distance2" type="string" />
+        <property name="status" type="string" />
+        <property name="decouverte" type="string" />
+
+
     </class>
 </hibernate-mapping>
