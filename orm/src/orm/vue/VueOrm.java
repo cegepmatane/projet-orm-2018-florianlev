@@ -1,12 +1,10 @@
 package orm.vue;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import java.util.Map.Entry;
+import java.util.TreeMap;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -16,23 +14,21 @@ import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 
 public class VueOrm extends Application{
-	protected List<Planete> listePlanete;
+	protected TreeMap<String, Planete> arbrePlanete;
 	protected ControleurOrm controleur;
 	protected StackPane racine;
 	protected Alert alerte;
 	protected Alert alerteContinent;
 	protected Stage scenePrincipale;
 	protected TabPane tabPane;
-
 	protected Tab ongletlistePlanete;
 	protected Tab marquePage;
 	protected Tab recherche;
 	
 	public VueOrm()
 	{
-		listePlanete = new ArrayList<>();
+		arbrePlanete = new TreeMap<String, Planete>();
 		controleur = new ControleurOrm(this);
-		listePlanete = controleur.getListePlanete();
 	}
 	
 	@Override
@@ -62,15 +58,18 @@ public class VueOrm extends Application{
 	public void afficherPanetes(StackPane racine)
 	{
 		Text texte = new Text();
-		String chaine = "";
-		
-		for(int position = listePlanete.size()-1;position >= 0; position--){
-			chaine+=listePlanete.get(position).getNom();
+		String chaine = String.valueOf(arbrePlanete.size());
+		for(Entry<String, Planete> entrée : arbrePlanete.entrySet()){
+			Planete planete = entrée.getValue();
+			chaine+=planete.getNom();
 			chaine+="	";
 		}
 		
 		texte.setText(chaine);
 		texte.setWrappingWidth(500);
 		racine.getChildren().add(texte);
+	}
+	public void setArbrePlanete(TreeMap<String, Planete> arbrePlanete) {
+		this.arbrePlanete = arbrePlanete;
 	}
 }

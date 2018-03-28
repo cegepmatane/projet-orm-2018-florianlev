@@ -4,24 +4,17 @@ import java.util.Iterator;
 import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
 
-import orm.modele.ArbrePlanete;
 import orm.modele.Planete;
-import java.util.ArrayList;
-import java.util.List;
-import orm.modele.Planete;
-
-
-
-//package orm.dao;
+import java.util.TreeMap;
 
 public class DaoOrm {
 
-	ArbrePlanete arbrePlanete;
+	TreeMap<String, Planete> arbrePlanete;
     public DaoOrm() {
-    	arbrePlanete = new ArbrePlanete();;
+    	arbrePlanete = new TreeMap<String, Planete>();
     }
 
-    public ArbrePlanete getRecherchePlanete ()
+    public TreeMap<String, Planete> getRecherchePlanete ()
     {
         Configuration configuration = new Configuration();
         configuration.addClass(Planete.class);
@@ -46,7 +39,7 @@ public class DaoOrm {
         while (iterateurPlanete.hasNext())
         {
         	Planete planete = (Planete)iterateurPlanete.next();
-        	if(null!=planete)arbrePlanete.ajouter(planete);
+        	if(null!=planete)arbrePlanete.put(planete.getNom(), planete);
         }
         
         session.close();
