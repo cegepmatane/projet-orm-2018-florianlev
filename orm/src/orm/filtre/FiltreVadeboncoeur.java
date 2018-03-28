@@ -49,7 +49,7 @@ public class FiltreVadeboncoeur extends TemplateFiltre{
 
 	@Override
 	protected void trierAnalysable() {
-		// rien car vadeboncoeur n'a pas de critere
+		// aucun critere
 		
 	}
 
