@@ -58,7 +58,7 @@ public class VueOrm extends Application{
 	public void afficherPanetes(StackPane racine)
 	{
 		Text texte = new Text();
-		String chaine = String.valueOf(arbrePlanete.size());
+		String chaine = "";
 		for(Entry<String, Planete> entrée : arbrePlanete.entrySet()){
 			Planete planete = entrée.getValue();
 			chaine+=planete.getNom();

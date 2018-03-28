@@ -3,6 +3,7 @@ package orm.controleur;
 import java.util.TreeMap;
 
 import orm.dao.DaoOrm;
+import orm.filtre.FiltreVadeboncoeur;
 import orm.modele.Planete;
 import orm.vue.VueOrm;
 

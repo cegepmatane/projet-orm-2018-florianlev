@@ -1,13 +1,14 @@
 package orm.filtre;
 
 import java.util.List;
+import java.util.TreeMap;
 
 import orm.modele.Planete;
 
 public class FiltreTournesol extends TemplateFiltre{
 
-	public FiltreTournesol(List<Planete> listePlanete) {
-		super(listePlanete);
+	public FiltreTournesol(TreeMap<String, Planete> arbrePlanete) {
+		super(arbrePlanete);
 	}
 
 	@Override

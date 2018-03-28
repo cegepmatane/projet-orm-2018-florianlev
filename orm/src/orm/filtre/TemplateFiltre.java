@@ -1,17 +1,22 @@
 package orm.filtre;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.TreeMap;
 
 import orm.modele.Planete;
 
 public abstract class TemplateFiltre {
-	List<Planete> listeATrier;
+	TreeMap<String, Planete> arbrePlanete;
 	List<Planete> listeHabitable;
 	List<Planete> listeAtteignable;
 	List<Planete> listeAnalysable;
-	public TemplateFiltre(List<Planete> listePlanete)
+	public TemplateFiltre(TreeMap<String, Planete> arbrePlanete)
 	{
-		this.listeATrier = listePlanete;
+		this.arbrePlanete = arbrePlanete;
+		listeHabitable = new ArrayList<Planete>();
+		listeAtteignable = new ArrayList<Planete>();
+		listeAnalysable = new ArrayList<Planete>();
 	}
 	public void executer()
 	{
