@@ -1,29 +1,26 @@
 package orm.modele.memento;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
 
 public class MemoirePlanetes {
-    protected List<MementoPlanete> listePlanete;
+    protected HashMap<String, MementoPlanete> hashPlanete;
 
     public MemoirePlanetes()
     {
-        this.listePlanete = new ArrayList<MementoPlanete>();
+        this.hashPlanete = new HashMap<String, MementoPlanete>();
     }
 
-    public List<MementoPlanete> getListePlanete()
+    public HashMap<String, MementoPlanete> getListePlanete()
     {
-        return listePlanete;
+        return hashPlanete;
     }
 
     public void ajouterMemento(MementoPlanete memento)
     {
-        this.listePlanete.add(memento);
+        this.hashPlanete.put(memento.planete.getNom(), memento);
     }
 
-    public void setListePlanete(List<MementoPlanete> listePlanete)
+    public void setListePlanete(HashMap<String, MementoPlanete> hashPlanete)
     {
-        this.listePlanete = listePlanete;
+        this.hashPlanete = hashPlanete;
     }
-
-
 }
