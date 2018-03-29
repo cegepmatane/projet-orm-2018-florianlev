@@ -19,9 +19,9 @@ public class FiltreTournesol extends TemplateFiltre{
 
 	@Override
 	protected void trierAtteignable() {
-		for(Entry<String, Planete> entrée : arbrePlanete.entrySet()){
+		for(Entry<String, Planete> entree : arbrePlanete.entrySet()){
 			
-			Planete planete = entrée.getValue();
+			Planete planete = entree.getValue();
 			float distance = 0;
 			String stringDistance = planete.getDistance();
 			stringDistance += "    ";
@@ -42,9 +42,9 @@ public class FiltreTournesol extends TemplateFiltre{
 
 	@Override
 	protected void trierAnalysable() {
-		for(Entry<String, Planete> entrée : arbrePlanete.entrySet()){
+		for(Entry<String, Planete> entree : arbrePlanete.entrySet()){
 			
-			Planete planete = entrée.getValue();
+			Planete planete = entree.getValue();
 			float periode = Float.valueOf(planete.getPeriode().substring(0, 3));
 			//System.out.println(periode);
 			if(periode < 40)

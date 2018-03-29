@@ -59,8 +59,8 @@ public class VueOrm extends Application{
 	{
 		Text texte = new Text();
 		String chaine = "";
-		for(Entry<String, Planete> entrée : arbrePlanete.entrySet()){
-			Planete planete = entrée.getValue();
+		for(Entry<String, Planete> entree : arbrePlanete.entrySet()){
+			Planete planete = entree.getValue();
 			chaine+=planete.getNom();
 			chaine+="	";
 		}

@@ -13,9 +13,9 @@ public class FiltreVadeboncoeur extends TemplateFiltre{
 
 	@Override
 	protected void trierHabitable() {
-		for(Entry<String, Planete> entrée : arbrePlanete.entrySet()){
+		for(Entry<String, Planete> entree: arbrePlanete.entrySet()){
 			
-			Planete planete = entrée.getValue();
+			Planete planete = entree.getValue();
 			int temperature = Integer.valueOf(planete.getTemperature().substring(0, 3));
 			//System.out.println(temperature);
 			if(temperature < 240)
@@ -26,9 +26,9 @@ public class FiltreVadeboncoeur extends TemplateFiltre{
 
 	@Override
 	protected void trierAtteignable() {
-		for(Entry<String, Planete> entrée : arbrePlanete.entrySet()){
+		for(Entry<String, Planete> entree : arbrePlanete.entrySet()){
 			
-			Planete planete = entrée.getValue();
+			Planete planete = entree.getValue();
 			float distance = 0;
 			String stringDistance = planete.getDistance();
 			stringDistance += "    ";

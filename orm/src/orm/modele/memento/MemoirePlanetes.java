@@ -25,9 +25,9 @@ public class MemoirePlanetes {
     public void setListePlanete(HashMap<String, MementoPlanete> hashPlanete)
     {
         this.hashPlanete = hashPlanete;
-        for(Entry<String, MementoPlanete> entrée : hashPlanete.entrySet())
+        for(Entry<String, MementoPlanete> entree : hashPlanete.entrySet())
         {
-        	daoMemento.sauvegarder(entrée.getValue());
+        	daoMemento.sauvegarder(entree.getValue());
         }
     }
 }
