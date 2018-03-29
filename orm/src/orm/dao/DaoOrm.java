@@ -35,9 +35,4 @@ public class DaoOrm {
 
         return arbrePlanete;
     }
-    public void sauvegardeMemento(String planete)
-    {
-    	
-    }
-
 }
