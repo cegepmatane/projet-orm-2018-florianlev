@@ -38,18 +38,21 @@ public class VueOrm extends Application{
 	{
 		this.scenePrincipale = scenePrincipale;
 		TabPane racine = new TabPane();
-		afficherPanetes(racine);
+		//afficherPanetes();
 		Scene scene = new Scene(racine, 500, 500);
 
-
+		StackPane tabListePlanete = new StackPane();
+		afficherPanetes(tabListePlanete);
 		ongletlistePlanete = new Tab("");
-		tabPane.getTabs().add(ongletlistePlanete);
+		racine.getTabs().add(ongletlistePlanete);
+		ongletlistePlanete.setText("Liste des planetes");
+		ongletlistePlanete.setContent(tabListePlanete);
 
 		marquePage = new Tab("");
-		tabPane.getTabs().add(marquePage);
+		racine.getTabs().add(marquePage);
 
 		recherche = new Tab("");
-		tabPane.getTabs().add(recherche);
+		racine.getTabs().add(recherche);
 
 
 		//btnSauvegarder = new Button();
@@ -61,7 +64,7 @@ public class VueOrm extends Application{
 
 		//controleur.afficherOnglets();
 	}
-	public void afficherPanetes(TabPane racine)
+	public void afficherPanetes(StackPane racine)
 	{
 		Text texte = new Text();
 		String chaine = "";
@@ -73,7 +76,8 @@ public class VueOrm extends Application{
 		
 		texte.setText(chaine);
 		texte.setWrappingWidth(500);
-		this.ongletlistePlanete.setText(texte);
+		racine.getChildren().add(texte);
+
 	}
 	public void setArbrePlanete(TreeMap<String, Planete> arbrePlanete) {
 		this.arbrePlanete = arbrePlanete;
