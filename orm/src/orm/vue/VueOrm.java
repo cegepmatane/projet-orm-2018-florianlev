@@ -91,7 +91,7 @@ public class VueOrm extends Application{
 			//bouttonModifier.setTranslateY(decalage-50);
 			//this.ajouterEvenementModifier(bouttonModifier);
 
-			//racine.getChildren().addAll(labelPlanet, bouttonSuprimer/*, bouttonModifier*/);
+			racine.getChildren().addAll(labelPlanet);
 		}
 	}
 
