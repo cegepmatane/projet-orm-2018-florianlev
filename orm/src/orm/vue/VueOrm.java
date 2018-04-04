@@ -133,7 +133,7 @@ public class VueOrm extends Application{
 			btnSauvegarder.setTranslateY(decalage-50);
 			this.ajouterEvenementSauvegarder(btnSauvegarder, planete);
 
-			racine.getChildren().addAll(labelPlanet);
+			racine.getChildren().addAll(labelPlanet, btnSauvegarder);
 		}
 	}
 

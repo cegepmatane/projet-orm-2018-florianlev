@@ -13,7 +13,7 @@ public class ControleurOrm {
 	protected VueOrm vue;
 	protected DaoOrm daoPlanete;
 	protected TreeMap<String, Planete> arbrePlanete;
-	protected MementoPlanete memento;
+	//protected MementoPlanete memento;
 	protected MemoirePlanetes memoire;
 
 
@@ -21,7 +21,7 @@ public class ControleurOrm {
 	public ControleurOrm(VueOrm vue)
 	{
 		memoire = new MemoirePlanetes();
-		memento = new MementoPlanete();
+		//memento = new MementoPlanete();
 
 		this.vue = vue;
 		DaoOrm daoPlanete = new DaoOrm();
@@ -33,6 +33,8 @@ public class ControleurOrm {
 
 	public void sauvegarder(Planete planete)
 	{
+		MementoPlanete memento = new MementoPlanete();
 		memento.setPlanete(planete);
+		memoire.ajouterMemento(memento);
 	}
 }
