@@ -27,8 +27,7 @@ public class VueOrm extends Application{
 	protected Tab ongletlistePlanete;
 	protected Tab marquePage;
 	protected Tab recherche;
-	protected Button btnSauvegarder;
-	
+
 	public VueOrm()
 	{
 		arbrePlanete = new TreeMap<String, Planete>();
@@ -39,15 +38,19 @@ public class VueOrm extends Application{
 	public void start(Stage scenePrincipale) throws Exception 
 	{
 		this.scenePrincipale = scenePrincipale;
-		VBox vbox = new VBox();
-		vbox.setAlignment(Pos.TOP_LEFT);
+		VBox vboxListe = new VBox();
+		VBox vboxSauvegarder = new VBox();
+		vboxListe.setAlignment(Pos.TOP_LEFT);
+		vboxSauvegarder.setAlignment(Pos.TOP_LEFT);
 
-
-		ScrollPane scroll = new ScrollPane();
-		scroll.setContent(vbox);
+		ScrollPane scrollListeSauvegarde = new ScrollPane();
+		ScrollPane scrollListe = new ScrollPane();
+		scrollListeSauvegarde.setContent(vboxSauvegarder);
+		scrollListe.setContent(vboxListe);
 
 		TabPane racine = new TabPane();
-		afficherPanetes(vbox);
+		afficherPanetes(vboxListe);
+		afficherPanetesSauvegarder(vboxSauvegarder);
 		Scene scene = new Scene(racine, 500, 500);
 
 		//StackPane tabListePlanete = new StackPane();
@@ -55,12 +58,14 @@ public class VueOrm extends Application{
 		ongletlistePlanete = new Tab("");
 
 		ongletlistePlanete.setText("Liste des planetes");
-		ongletlistePlanete.setContent(scroll);
+		ongletlistePlanete.setContent(scrollListe);
 		racine.getTabs().add(ongletlistePlanete);
 
 		marquePage = new Tab("");
+		marquePage.setText("Marque page");
+
+		marquePage.setContent(scrollListeSauvegarde);
 		racine.getTabs().add(marquePage);
-		ongletlistePlanete.setText("Marque page");
 
 
 		recherche = new Tab("");
@@ -90,6 +95,30 @@ public class VueOrm extends Application{
 			//bouttonModifier.setTranslateX(200);
 			//bouttonModifier.setTranslateY(decalage-50);
 			//this.ajouterEvenementModifier(bouttonModifier);
+
+			racine.getChildren().addAll(labelPlanet);
+		}
+	}
+
+	protected void afficherPanetesSauvegarder(VBox racine)
+	{
+		int decalage = 80;
+
+		for(Entry<String, Planete> entree : arbrePlanete.entrySet())
+		{
+
+			Planete planete = entree.getValue();
+			Label labelPlanet =  new Label(planete.getNom());
+			//Button  = new Button("Modifier");
+			Button btnSauvegarder = new Button("Sauvegarder");
+
+			labelPlanet.setTranslateX(0);
+			labelPlanet.setTranslateY(decalage);
+
+			btnSauvegarder.setId(planete.getNom());
+			btnSauvegarder.setTranslateX(200);
+			btnSauvegarder.setTranslateY(decalage-50);
+			//this.ajouterEvenement(btnSauvegarder);
 
 			racine.getChildren().addAll(labelPlanet);
 		}

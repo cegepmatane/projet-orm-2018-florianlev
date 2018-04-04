@@ -118,12 +118,12 @@
       <file leaf-file-name="VueOrm.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/orm/vue/VueOrm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="93" column="53" lean-forward="true" selection-start-line="93" selection-start-column="53" selection-end-line="93" selection-end-column="53" />
+            <state relative-caret-position="-999">
+              <caret line="52" column="52" lean-forward="false" selection-start-line="52" selection-start-column="52" selection-end-line="52" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2862#2863#0" expanded="true" />
-                <element signature="e#2901#2902#0" expanded="true" />
+                <element signature="e#3775#3776#0" expanded="true" />
+                <element signature="e#3814#3815#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -498,8 +498,8 @@
           <caret line="45" column="23" lean-forward="false" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2862#2863#0" expanded="true" />
-            <element signature="e#2901#2902#0" expanded="true" />
+            <element signature="e#3775#3776#0" expanded="true" />
+            <element signature="e#3814#3815#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -542,8 +542,8 @@
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2862#2863#0" expanded="true" />
-            <element signature="e#2901#2902#0" expanded="true" />
+            <element signature="e#3775#3776#0" expanded="true" />
+            <element signature="e#3814#3815#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -619,8 +619,8 @@
           <caret line="4" column="34" lean-forward="false" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2862#2863#0" expanded="true" />
-            <element signature="e#2901#2902#0" expanded="true" />
+            <element signature="e#3775#3776#0" expanded="true" />
+            <element signature="e#3814#3815#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -677,8 +677,8 @@
           <caret line="4" column="34" lean-forward="true" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2862#2863#0" expanded="true" />
-            <element signature="e#2901#2902#0" expanded="true" />
+            <element signature="e#3775#3776#0" expanded="true" />
+            <element signature="e#3814#3815#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -762,8 +762,8 @@
           <caret line="21" column="38" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2862#2863#0" expanded="true" />
-            <element signature="e#2901#2902#0" expanded="true" />
+            <element signature="e#3775#3776#0" expanded="true" />
+            <element signature="e#3814#3815#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -907,12 +907,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/orm/vue/VueOrm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="93" column="53" lean-forward="true" selection-start-line="93" selection-start-column="53" selection-end-line="93" selection-end-column="53" />
+        <state relative-caret-position="-999">
+          <caret line="52" column="52" lean-forward="false" selection-start-line="52" selection-start-column="52" selection-end-line="52" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2862#2863#0" expanded="true" />
-            <element signature="e#2901#2902#0" expanded="true" />
+            <element signature="e#3775#3776#0" expanded="true" />
+            <element signature="e#3814#3815#0" expanded="true" />
           </folding>
         </state>
       </provider>
