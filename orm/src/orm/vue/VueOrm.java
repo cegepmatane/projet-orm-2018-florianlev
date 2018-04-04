@@ -5,6 +5,7 @@ import java.util.TreeMap;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -24,6 +25,7 @@ public class VueOrm extends Application{
 	protected Tab ongletlistePlanete;
 	protected Tab marquePage;
 	protected Tab recherche;
+	protected Button btnSauvegarder;
 	
 	public VueOrm()
 	{
@@ -35,11 +37,11 @@ public class VueOrm extends Application{
 	public void start(Stage scenePrincipale) throws Exception 
 	{
 		this.scenePrincipale = scenePrincipale;
-		StackPane racine = new StackPane();
-		afficherPanetes(racine);		
+		TabPane racine = new TabPane();
+		afficherPanetes(racine);
 		Scene scene = new Scene(racine, 500, 500);
 
-		TabPane tabPane = new TabPane();
+
 		ongletlistePlanete = new Tab("");
 		tabPane.getTabs().add(ongletlistePlanete);
 
@@ -48,14 +50,18 @@ public class VueOrm extends Application{
 
 		recherche = new Tab("");
 		tabPane.getTabs().add(recherche);
-		
+
+
+		//btnSauvegarder = new Button();
+		//btnSauvegarder.setText("Say 'Hello World'");
+
 		scenePrincipale.setScene(scene);
 		scenePrincipale.setTitle("Planet");
 		scenePrincipale.show();
 
 		//controleur.afficherOnglets();
 	}
-	public void afficherPanetes(StackPane racine)
+	public void afficherPanetes(TabPane racine)
 	{
 		Text texte = new Text();
 		String chaine = "";
@@ -67,7 +73,7 @@ public class VueOrm extends Application{
 		
 		texte.setText(chaine);
 		texte.setWrappingWidth(500);
-		racine.getChildren().add(texte);
+		this.ongletlistePlanete.setText(texte);
 	}
 	public void setArbrePlanete(TreeMap<String, Planete> arbrePlanete) {
 		this.arbrePlanete = arbrePlanete;
