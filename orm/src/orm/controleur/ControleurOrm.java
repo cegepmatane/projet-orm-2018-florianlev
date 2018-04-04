@@ -1,5 +1,7 @@
 package orm.controleur;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.TreeMap;
 
 import orm.dao.DaoOrm;
@@ -13,16 +15,21 @@ public class ControleurOrm {
 	protected TreeMap<String, Planete> arbrePlanete;
 	protected MementoPlanete memento;
 	protected MemoirePlanetes memoire;
-	
+
+
+
 	public ControleurOrm(VueOrm vue)
 	{
 		memoire = new MemoirePlanetes();
 		memento = new MementoPlanete();
+
 		this.vue = vue;
 		DaoOrm daoPlanete = new DaoOrm();
 		arbrePlanete = daoPlanete.getRecherchePlanete();
 		//memento.setPlanete(arbrePlanete.get("Earth"));
 		//memoire.ajouterMemento(memento);
 		vue.setArbrePlanete(arbrePlanete);
+
+
 	}
 }
