@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Map.Entry;
 import java.util.TreeMap;
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -13,6 +15,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import orm.controleur.ControleurOrm;
 import orm.modele.Planete;
+import orm.modele.memento.MementoPlanete;
 
 public class VueOrm extends Application{
 
@@ -77,6 +80,16 @@ public class VueOrm extends Application{
 
 	}
 
+	protected void ajouterEvenementSauvegarder(Button boutton, Planete planete)
+	{
+		boutton.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent event) {
+				controleur.sauvegarder(planete);
+			}
+		});
+	}
+
 	protected void afficherPanetes(VBox racine)
 	{
 		int decalage = 80;
@@ -118,7 +131,7 @@ public class VueOrm extends Application{
 			btnSauvegarder.setId(planete.getNom());
 			btnSauvegarder.setTranslateX(200);
 			btnSauvegarder.setTranslateY(decalage-50);
-			//this.ajouterEvenement(btnSauvegarder);
+			this.ajouterEvenementSauvegarder(btnSauvegarder, planete);
 
 			racine.getChildren().addAll(labelPlanet);
 		}

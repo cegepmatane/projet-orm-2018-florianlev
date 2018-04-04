@@ -29,7 +29,10 @@ public class ControleurOrm {
 		//memento.setPlanete(arbrePlanete.get("Earth"));
 		//memoire.ajouterMemento(memento);
 		vue.setArbrePlanete(arbrePlanete);
+	}
 
-
+	public void sauvegarder(Planete planete)
+	{
+		memento.setPlanete(planete);
 	}
 }
