@@ -73,12 +73,11 @@ public class VueOrm extends Application{
 		afficherPanetes(vboxListe);
 		afficherPanetesSauvegarder(vboxSauvegarder);
 		afficherRechercheTournesol(vboxRechercheTournesol);
+		afficherRechercheVadeboncoeur(vboxRechercheVadeboncoeur);
 
 
 		Scene scene = new Scene(racine, 500, 500);
 
-		//StackPane tabListePlanete = new StackPane();
-		//afficherPanetes(scroll);
 		ongletlistePlanete = new Tab("");
 
 		ongletlistePlanete.setText("Liste des planetes");
@@ -98,6 +97,7 @@ public class VueOrm extends Application{
 
 		rechercheVadeboncoeur = new Tab("");
 		rechercheVadeboncoeur.setText("Recherche vadeboncoeur");
+		rechercheVadeboncoeur.setContent(scrollRechercheVadeboncoeur);
 		racine.getTabs().add(rechercheVadeboncoeur);
 
 		scenePrincipale.setScene(scene);
@@ -120,7 +120,33 @@ public class VueOrm extends Application{
 	{
 		int decalage = 80;
 
+		Label labelTexteAnalysable = new Label("Planetes Analysable : ");
+		labelTexteAnalysable.setTranslateX(0);
+		labelTexteAnalysable.setTranslateY(decalage);
+		racine.getChildren().addAll(labelTexteAnalysable);
 
+		for(Planete pAnalysable : listeAnalysable )
+		{
+			Label labelPlanetAnalysable =  new Label(pAnalysable.getNom());
+
+			labelPlanetAnalysable.setTranslateX(0);
+			labelPlanetAnalysable.setTranslateY(decalage);
+			racine.getChildren().addAll(labelPlanetAnalysable);
+		}
+		Label labelTexteHabitable = new Label("Planetes habitable : ");
+		labelTexteHabitable.setTranslateX(0);
+		labelTexteHabitable.setTranslateY(decalage);
+		racine.getChildren().add(labelTexteHabitable);
+
+		for(Planete pHabitable : listeHabitable)
+		{
+			Label labelPlaneteHabitable = new Label(pHabitable.getNom());
+
+			labelPlaneteHabitable.setTranslateX(0);
+			labelPlaneteHabitable.setTranslateY(decalage);
+
+			racine.getChildren().addAll(labelPlaneteHabitable);
+		}
 	}
 
 	protected void afficherRechercheTournesol(VBox racine)
@@ -168,16 +194,8 @@ public class VueOrm extends Application{
 
 			Planete planete = entree.getValue();
 			Label labelPlanet =  new Label(planete.getNom());
-			//Button bouttonModifier = new Button("Modifier");
-
 			labelPlanet.setTranslateX(0);
 			labelPlanet.setTranslateY(decalage);
-
-			//bouttonModifier.setId(listePlanete.get(position).getNom());
-			//bouttonModifier.setTranslateX(200);
-			//bouttonModifier.setTranslateY(decalage-50);
-			//this.ajouterEvenementModifier(bouttonModifier);
-
 			racine.getChildren().addAll(labelPlanet);
 		}
 	}
@@ -191,7 +209,6 @@ public class VueOrm extends Application{
 
 			Planete planete = entree.getValue();
 			Label labelPlanet =  new Label(planete.getNom());
-			//Button  = new Button("Modifier");
 			Button btnSauvegarder = new Button("Sauvegarder");
 
 			labelPlanet.setTranslateX(0);
@@ -206,21 +223,6 @@ public class VueOrm extends Application{
 		}
 	}
 
-	/*public void afficherPanetes(StackPane racine)
-	{
-		Text texte = new Text();
-		String chaine = "";
-		for(Entry<String, Planete> entree : arbrePlanete.entrySet()){
-			Planete planete = entree.getValue();
-			chaine+=planete.getNom();
-			chaine+="	";
-		}
-		
-		texte.setText(chaine);
-		texte.setWrappingWidth(500);
-		racine.getChildren().add(texte);
-
-	}*/
 	public void setListeHabitable(List<Planete> listeHabitable) {
 		this.listeHabitable = listeHabitable;
 	}
@@ -230,8 +232,6 @@ public class VueOrm extends Application{
 	public void setListeAtteignable(List<Planete> listeAtteignable) {
 		this.listeAtteignable = listeAtteignable;
 	}
-
-
 
 	public void setArbrePlanete(TreeMap<String, Planete> arbrePlanete) {
 		this.arbrePlanete = arbrePlanete;
