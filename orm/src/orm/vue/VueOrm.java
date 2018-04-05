@@ -116,12 +116,22 @@ public class VueOrm extends Application{
 		});
 	}
 
+	protected void afficherRechercheVadeboncoeur(VBox racine)
+	{
+		int decalage = 80;
+
+
+	}
+
 	protected void afficherRechercheTournesol(VBox racine)
 	{
 		int decalage = 80;
 
 		Label labelTexteAnalysable = new Label("Planetes Analysable : ");
+		labelTexteAnalysable.setTranslateX(0);
+		labelTexteAnalysable.setTranslateY(decalage);
 		racine.getChildren().add(labelTexteAnalysable);
+
 
 		for(Planete pAnalysable : listeAnalysable )
 		{
@@ -134,6 +144,8 @@ public class VueOrm extends Application{
 		}
 
 		Label labelTexteAtteignable = new Label("Planetes Atteignable : ");
+		labelTexteAtteignable.setTranslateX(0);
+		labelTexteAtteignable.setTranslateY(decalage);
 		racine.getChildren().add(labelTexteAtteignable);
 
 		for(Planete pHabitable : listeAtteignable)
