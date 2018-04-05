@@ -24,19 +24,18 @@ public class ControleurOrm {
 	{
 		memoire = new MemoirePlanetes();
 		//memento = new MementoPlanete();
-		FiltreTournesol filtreTournesol = new FiltreTournesol(arbrePlanete);
+
 
 		this.vue = vue;
 		DaoOrm daoPlanete = new DaoOrm();
 		arbrePlanete = daoPlanete.getRecherchePlanete();
+		FiltreTournesol filtreTournesol = new FiltreTournesol(arbrePlanete);
 		//memento.setPlanete(arbrePlanete.get("Earth"));
 		//memoire.ajouterMemento(memento);
 		vue.setArbrePlanete(arbrePlanete);
+		filtreTournesol.executer();
 			if( null != filtreTournesol.getListeAtteignable())
 			{
-
-				filtreTournesol.executer();
-
 				//vue.setListeAnalysable(filtreTournesol.getListeAnalysable());
 				vue.setListeAtteignable(filtreTournesol.getListeAtteignable());
 				//vue.setListeHabitable(filtreTournesol.getListeHabitable());
