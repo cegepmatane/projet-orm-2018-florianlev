@@ -36,9 +36,9 @@ public class ControleurOrm {
 		filtreTournesol.executer();
 			if( null != filtreTournesol.getListeAtteignable())
 			{
-				//vue.setListeAnalysable(filtreTournesol.getListeAnalysable());
+				vue.setListeAnalysable(filtreTournesol.getListeAnalysable());
 				vue.setListeAtteignable(filtreTournesol.getListeAtteignable());
-				//vue.setListeHabitable(filtreTournesol.getListeHabitable());
+				vue.setListeHabitable(filtreTournesol.getListeHabitable());
 			}
 		}
 

@@ -9,6 +9,7 @@ import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
@@ -71,6 +72,9 @@ public class VueOrm extends Application{
 		TabPane racine = new TabPane();
 		afficherPanetes(vboxListe);
 		afficherPanetesSauvegarder(vboxSauvegarder);
+		afficherRechercheTournesol(vboxRechercheTournesol);
+
+
 		Scene scene = new Scene(racine, 500, 500);
 
 		//StackPane tabListePlanete = new StackPane();
@@ -89,6 +93,7 @@ public class VueOrm extends Application{
 
 		rechercheTournesol = new Tab("");
 		rechercheTournesol.setText("Recherche tournesol");
+		rechercheTournesol.setContent(scrollRechercheTournesol);
 		racine.getTabs().add(rechercheTournesol);
 
 		rechercheVadeboncoeur = new Tab("");
@@ -109,6 +114,37 @@ public class VueOrm extends Application{
 				controleur.sauvegarder(planete);
 			}
 		});
+	}
+
+	protected void afficherRechercheTournesol(VBox racine)
+	{
+		int decalage = 80;
+
+		Label labelTexteAnalysable = new Label("Planetes Analysable : ");
+		racine.getChildren().add(labelTexteAnalysable);
+
+		for(Planete pAnalysable : listeAnalysable )
+		{
+			Label labelPlanetAnalysable =  new Label(pAnalysable.getNom());
+
+
+			labelPlanetAnalysable.setTranslateX(0);
+			labelPlanetAnalysable.setTranslateY(decalage);
+			racine.getChildren().addAll(labelPlanetAnalysable);
+		}
+
+		Label labelTexteAtteignable = new Label("Planetes Atteignable : ");
+		racine.getChildren().add(labelTexteAtteignable);
+
+		for(Planete pHabitable : listeAtteignable)
+		{
+			Label labelPlaneteHabitable = new Label(pHabitable.getNom());
+
+			labelPlaneteHabitable.setTranslateX(0);
+			labelPlaneteHabitable.setTranslateY(decalage);
+			racine.getChildren().addAll(labelPlaneteHabitable);
+		}
+
 	}
 
 	protected void afficherPanetes(VBox racine)
