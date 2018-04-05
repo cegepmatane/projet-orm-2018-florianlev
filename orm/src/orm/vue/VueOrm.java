@@ -29,7 +29,8 @@ public class VueOrm extends Application{
 	protected TabPane tabPane;
 	protected Tab ongletlistePlanete;
 	protected Tab marquePage;
-	protected Tab recherche;
+	protected Tab rechercheTournesol;
+	protected Tab rechercheVadeboncoeur;
 
 	public VueOrm()
 	{
@@ -43,13 +44,23 @@ public class VueOrm extends Application{
 		this.scenePrincipale = scenePrincipale;
 		VBox vboxListe = new VBox();
 		VBox vboxSauvegarder = new VBox();
+		VBox vboxRechercheTournesol = new VBox();
+		VBox vboxRechercheVadeboncoeur = new VBox();
+
 		vboxListe.setAlignment(Pos.TOP_LEFT);
 		vboxSauvegarder.setAlignment(Pos.TOP_LEFT);
+		vboxRechercheTournesol.setAlignment(Pos.TOP_LEFT);
+		vboxRechercheVadeboncoeur.setAlignment(Pos.TOP_LEFT);
 
 		ScrollPane scrollListeSauvegarde = new ScrollPane();
 		ScrollPane scrollListe = new ScrollPane();
+		ScrollPane scrollRechercheTournesol = new ScrollPane();
+		ScrollPane scrollRechercheVadeboncoeur = new ScrollPane();
+
 		scrollListeSauvegarde.setContent(vboxSauvegarder);
 		scrollListe.setContent(vboxListe);
+		scrollRechercheTournesol.setContent(vboxRechercheTournesol);
+		scrollRechercheVadeboncoeur.setContent(vboxRechercheVadeboncoeur);
 
 		TabPane racine = new TabPane();
 		afficherPanetes(vboxListe);
@@ -66,13 +77,17 @@ public class VueOrm extends Application{
 
 		marquePage = new Tab("");
 		marquePage.setText("Marque page");
-
 		marquePage.setContent(scrollListeSauvegarde);
 		racine.getTabs().add(marquePage);
 
 
-		recherche = new Tab("");
-		racine.getTabs().add(recherche);
+		rechercheTournesol = new Tab("");
+		rechercheTournesol.setText("Recherche tournesol");
+		racine.getTabs().add(rechercheTournesol);
+
+		rechercheVadeboncoeur = new Tab("");
+		rechercheVadeboncoeur.setText("Recherche vadeboncoeur");
+		racine.getTabs().add(rechercheVadeboncoeur);
 
 		scenePrincipale.setScene(scene);
 		scenePrincipale.setTitle("Planet");
