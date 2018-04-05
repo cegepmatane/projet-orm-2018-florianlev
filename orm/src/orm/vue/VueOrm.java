@@ -21,6 +21,12 @@ public class VueOrm extends Application{
 
 
 	protected TreeMap<String, Planete> arbrePlanete;
+
+
+
+	protected List<Planete> listeHabitable;
+	protected List<Planete> listeAtteignable;
+	protected List<Planete> listeAnalysable;
 	protected ControleurOrm controleur;
 	protected StackPane racine;
 	protected Alert alerte;
@@ -167,6 +173,15 @@ public class VueOrm extends Application{
 		racine.getChildren().add(texte);
 
 	}*/
+	public void setListeHabitable(List<Planete> listeHabitable) {
+		this.listeHabitable = listeHabitable;
+	}
+	public void setListeAnalysable(List<Planete> listeAnalysable) {
+		this.listeAnalysable = listeAnalysable;
+	}
+	public void setListeAtteignable(List<Planete> listeAtteignable) {
+		this.listeAtteignable = listeAtteignable;
+	}
 
 
 
