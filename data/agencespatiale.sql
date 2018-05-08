@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le :  ven. 23 mars 2018 à 10:39
+-- Généré le :  mar. 08 mai 2018 à 07:02
 -- Version du serveur :  5.7.20
 -- Version de PHP :  7.1.13
 
@@ -96,8 +96,7 @@ INSERT INTO `exoplanetes` (`id`, `planete`, `etoile`, `typeEtoile`, `masse`, `ra
 (36, 'Gliese 3293 c*', 'Gliese 3293', 'M2.5V', '= 8.6', '1.4 – 1.9 – 2.5', '0.60', '223', '48.1', '59', 'optimistic habitable zone', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (37, 'Kepler-298d', 'Kepler-298', 'K?V', '? – 26.8 – 9.1', '2017-05-02 00:00:00', '1.29', '271', '77.5', '1545', 'optimistic habitable zone', '0.68', '0.00', '-0.86', '-0.11', ' +2.11', 'Super-terrienne chaude', 'Mésoplanète', NULL, '1545', 'Confirmée', '2012'),
 (38, 'Kepler-174d', 'Kepler-174', 'K?V', '? – 14.8 – 5.5', '2017-02-02 00:00:00', '0.43', '206', '247.4', '1174', 'optimistic habitable zone', '0.61', '0.00', ' +0.32', '-0.13', ' +1.77', 'Super-terrienne chaude', 'psychroplanète', NULL, '878.3', 'Confirmée', '2011'),
-(39, 'Kepler-296f', 'Kepler-296', 'M?V', '28.7 – 6.1 – 2.5', '2017-08-01 00:00:00', '0.34', '198, 274.0±15.0', '63.3', '737', 'optimistic habitable zone', '0.78', '0.15', '-0.90', '-0.14', ' +0.53', 'Super-terrienne chaude', 'Mésoplanète', NULL, '1089.6', 'Confirmée', '2011'),
-(46, 'sdask', 'l', 'j', 'lj', 'l', 'jl', 'j', 'lj', 'lj', 'lj', NULL, NULL, 'l', 'l', 'jl', 'lj', 'j', NULL, 'lj', 'lj', 'lj');
+(39, 'Kepler-296f', 'Kepler-296', 'M?V', '28.7 – 6.1 – 2.5', '2017-08-01 00:00:00', '0.34', '198, 274.0±15.0', '63.3', '737', 'optimistic habitable zone', '0.78', '0.15', '-0.90', '-0.14', ' +0.53', 'Super-terrienne chaude', 'Mésoplanète', NULL, '1089.6', 'Confirmée', '2011');
 
 --
 -- Index pour les tables déchargées
